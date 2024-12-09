@@ -1,0 +1,11 @@
+mkdocs==1.2.2
+mkdocs-material==7.3.2
+mkdocs-macros-plugin==0.6.0
+mkdocs-localsearch==0.9.1
+markdown-captions==2
+# wps-mkdocs-config-avancadas
+Jinja2==3.0.3
+setuptools
+pyyaml
+markdown
+
