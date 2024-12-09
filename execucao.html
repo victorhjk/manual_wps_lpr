@@ -1,0 +1,999 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
+    
+    
+      
+        <title>Execução - Parking Plus WPS_LPR</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.24c991ad.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/wps-config-avancadas.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#execucao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="index.html" title="Parking Plus WPS_LPR" class="md-header__button md-logo" aria-label="Parking Plus WPS_LPR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Parking Plus WPS_LPR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Execução
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent=""  aria-label="Tema Escuro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Tema Escuro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent=""  aria-label="Tema Claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Tema Claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Parking Plus WPS_LPR" class="md-nav__button md-logo" aria-label="Parking Plus WPS_LPR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Parking Plus WPS_LPR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Configuração
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuração" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Configuração
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuracao_sistema_operacional.html" class="md-nav__link">
+        Configuração Sistema Operacional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instalacao_mqtt.html" class="md-nav__link">
+        Instalação MQTT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instalacao.html" class="md-nav__link">
+        Instalação
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Execução
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="execucao.html" class="md-nav__link md-nav__link--active">
+        Execução
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-das-cameras" class="md-nav__link">
+    Configuração das câmeras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamento-do-sistema-wps_lpr" class="md-nav__link">
+    Funcionamento do sistema WPS_LPR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-logs-do-sistema" class="md-nav__link">
+    Consultando Logs do Sistema
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultando Logs do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alterando-nivel-de-log" class="md-nav__link">
+    Alterando nível de log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-cameras-online-no-sistema" class="md-nav__link">
+    Verificando câmeras online no sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solicitando-um-snaphot-de-uma-camera" class="md-nav__link">
+    Solicitando um snaphot de uma câmera
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-quantidade-de-threads" class="md-nav__link">
+    Verificando quantidade de Threads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reiniciando-a-aplicacao" class="md-nav__link">
+    Reiniciando a aplicação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-vagas-do-modo-segmentation" class="md-nav__link">
+    Verificando vagas do modo Segmentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-a-placa-com-o-modo-rekognition" class="md-nav__link">
+    Obtendo a placa com o modo Rekognition
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="erros.html" class="md-nav__link">
+        Erros Comuns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rekognition.html" class="md-nav__link">
+        Rekognition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-das-cameras" class="md-nav__link">
+    Configuração das câmeras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionamento-do-sistema-wps_lpr" class="md-nav__link">
+    Funcionamento do sistema WPS_LPR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultando-logs-do-sistema" class="md-nav__link">
+    Consultando Logs do Sistema
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultando Logs do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alterando-nivel-de-log" class="md-nav__link">
+    Alterando nível de log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-cameras-online-no-sistema" class="md-nav__link">
+    Verificando câmeras online no sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solicitando-um-snaphot-de-uma-camera" class="md-nav__link">
+    Solicitando um snaphot de uma câmera
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-quantidade-de-threads" class="md-nav__link">
+    Verificando quantidade de Threads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reiniciando-a-aplicacao" class="md-nav__link">
+    Reiniciando a aplicação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-vagas-do-modo-segmentation" class="md-nav__link">
+    Verificando vagas do modo Segmentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-a-placa-com-o-modo-rekognition" class="md-nav__link">
+    Obtendo a placa com o modo Rekognition
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="execucao">Execução</h1>
+<p style="text-align: justify;">
+    Siga essas etapas para executar o sistema de reconhecimento de placas de veículos WPS_LPR:
+</p>
+
+<h3 id="configuracao-das-cameras">Configuração das câmeras</h3>
+<p style="text-align: justify;">
+    <strong>1.</strong> Configure a conexão da(s) câmera(s) no arquivo:
+</p>
+<pre style="text-align: justify; font-family: 'Courier New', monospace;">
+<code>/var/lib/ParkingPlus/WpsLpr/config/config.json</code>
+</pre>
+<p style="text-align: justify;">
+    <strong>1.1</strong> Aqui está um exemplo de como o arquivo <code>config.json</code> deve ser configurado para o 
+funcionamento do sistema <em>WPS_LPR</em>, podem ser adicionadas várias câmeras para o processamento dentro do limite de
+processamento da máquina.
+</p>
+
+<pre><code class="language-json">[
+  {
+    &quot;camera_id&quot;: &quot;1&quot;,
+    &quot;camera_type&quot;: &quot;lpr&quot;,
+    &quot;camera_brand&quot;: &quot;intelbras&quot;,
+    &quot;wps_topic&quot;: &quot;WPS_LPR&quot;,
+    &quot;camera_ip&quot;: &quot;192.168.1.108&quot;,
+    &quot;user&quot;: &quot;wps&quot;,
+    &quot;password&quot;: &quot;wpsbrasil2021&quot;,
+    &quot;channel_dvr&quot;: &quot;1&quot;,
+    &quot;frame_ocr_rate&quot;: 10,
+    &quot;roi_size_x&quot;: 1280,
+    &quot;roi_size_y&quot;: 720,
+    &quot;roi_x&quot;: 0,
+    &quot;roi_y&quot;: 0,
+    &quot;limiar&quot;: 20,
+    &quot;plate_size_min&quot;: 0,
+    &quot;plate_size_max&quot;: 0,
+    &quot;image_size&quot;: 0,
+    &quot;ocr_mode&quot;: 0,
+    &quot;ocr_time&quot;: 1, 
+    &quot;sector_id&quot;: 1,
+    &quot;parking_name&quot;: &quot;&quot;,
+    &quot;protocol&quot;: &quot;udp&quot;,
+    &quot;power_led&quot;: 40,
+    &quot;publish_interval&quot;: 1000,
+    &quot;parking_spaces_quantity&quot;: 1,
+    &quot;park_ids&quot;: []
+  }
+]
+</code></pre>
+<blockquote style="text-align: justify;">
+    Remova quaisquer comentários caso use esse exemplo.
+    <ul>
+        <li><strong>camera_id</strong> é um número sequencial que identifica a câmera no arquivo e seus demais atributos;</li>
+        <li><strong>camera_ip</strong> é o ip da câmera que será conectada;</li>
+        <li><strong>wps_topic</strong> tópico do MQTT que as mensagens serão publicadas;</li>
+        <li><strong>user</strong> usuário da câmera;</li>
+        <li><strong>password</strong> senha da câmera;</li>
+        <li><strong>channel_dvr</strong> canal para conexão com a câmera, geralmente é "1", quando for utilizar conexão via
+        DVR ou NVR verificar o número do canal para se conectar;</li>
+        <li><strong>camera_brand</strong> é a marca da câmera, os modelos homologados são:
+            <ul>
+                <li><em>"intelbras"</em>;</li>
+                <li><em>"hikvision"</em>;</li>
+                <li><em>"positivo"</em>;</li>
+                <li><em>"pumatronix"</em>.</li>
+            </ul>
+        </li>
+        <li><strong>frame_ocr_rate</strong> é a taxa de fps que será passada para a câmera, o WPS_LPR por default faz o OCR
+        em uma imagem por segundo de cada câmera, porém ele não está mais vinculado a essa chave. <strong>PS</strong>: Para câmeras
+        Hikvision e Intelbrás mais atuais, utilize 25 ou 30;</li>
+        <li><strong>roi_size</strong> é o tamanho da imagem que será passada para o WPS_LPR fazer o OCR na imagem, o padrão
+        é 1280 para a largura e 720 para a altura;</li>
+        <li><strong>roi</strong> são os pontos iniciais para desenho de um retângulo na imagem, para limitar a área de
+        atuação do OCR na imagem. Um objetivo por exemplo é que não seja feito OCR em pistas vizinhas;</li>
+        <li><strong>ocr_mode</strong> é o tipo possível de OCR nos tipos de veículos, que são:
+            <ul>
+                <li><em>"0"</em> somente carro;</li>
+                <li><em>"1"</em> somente moto;</li>
+                <li><em>"2"</em> carro e moto.</li>
+            </ul>
+        </li>
+        <li><strong>camera_type</strong> é o tipo de utilização que a câmera terá no sistema WPS_LPR, que poderá ser:
+            <ul>
+                <li><em>"lpr"</em>: Para reconhecimento das placas de veículos;</li>
+                <li><em>"context"</em>: Para capturar fotos de câmeras de contexto, câmeras que serão posicionadas com o
+                intuito de registrar diversas faces dos veículos e do usuário do estacionamento;</li>
+                <li><em>"segmentation"</em>: Para utilização de reconhecimento de placas em vagas específicas do
+                estacionamento, bem como identificar se a vaga está livre ou ocupada. Cada câmera poderá monitorar de 1 a 4 vagas.</li>
+            </ul>
+        </li>
+        <li><strong>limiar</strong> é a quantidade de movimento para ativar o LPR, ou seja submeter o frame à biblioteca de
+        reconhecimento, caso a quantidade de movimento seja menor que o limiar, o frame será descartado,
+        até que a quantidade seja alcançada. Caso a quantidade seja superior ao limiar, e nos frames
+        seguintes seja menor, o sistema verificará no último frame submetido, se houve placa detectada,
+        caso sim, ele envia mais um frame, até que nenhuma placa seja detectada e não haja quantidade de
+        movimento superior ao limiar.</li>
+        <li><strong>image_size</strong> é o tamanho das imagens que serão enviadas na mensagem, os valores são:
+            <ul>
+                <li><em>"0"</em> 1280 x 720;</li>
+                <li><em>"1"</em> 800 x 450;</li>
+                <li><em>"2"</em> 640 x 360;</li>
+                <li><em>"9"</em> Sem imagem.</li>
+            </ul>
+        </li>
+        <li><strong>plate_size_min</strong> é o tamanho mínimo da placa para ser submetido ao OCR (0 é desligado).</li>
+        <li><strong>plate_size_max</strong> é o tamanho máximo da placa para ser submetido ao OCR (0 é desligado). Esse valor deve ser 
+        obrigatoriamente maior que o "plate_size_min".</li>
+        <strong><em></em></strong>
+        <li><strong>ocr_time</strong> é a quantidade de imagens por segundo que serão submetidas ao OCR no modo "<em>lpr</em>", este valor varia
+        de 1 a 4 imagens por segundo, o padrão é 1 por segundo, só aumente esse número caso tenha reserva de recursos de 
+        processamento no Servidor de LPR. Já no modo "<em>Segmentation</em>" é o tempo em que uma imagem será submetida ao OCR,
+        esse tempo é entre 10 e 40 segundos, o padrão é 15 segundos.</li>
+        <li><strong>sector_id</strong> é o ID do setor onde a câmera "<em>segmentation</em>" está instalada, isso reflete na tarifação do setor.</li>
+        <li><strong>parking_name</strong> é o nome do setor, é opcional.</li>
+        <strong><em></em></strong>
+        <li><strong>protocol</strong> é o tipo de protocolo que será usado para fazer o streaming das câmeras, o padrão é UDP, só use o
+        protocolo TCP para fazer debug no sistema.</li>
+        <strong><em></em></strong>
+        <li><strong>power_led</strong> é a potência do LED para câmeras Pumatronix, que contam com a luz branca, o padrão é 40, é importante
+        verificar o funcionamento para evitar que a imagem da placa "estoure".</li>
+        <strong><em></em></strong>
+        <li><strong>publish_interval</strong> é o tempo que a "melhor" placa será publicada no MQTT, como agora a quantidade de OCR por
+        segundo pode ser alterada, é importante não "inundar" o terminal com várias publicações de placas, sendo assim, mesmo
+        que a quantidade de OCR seja 4, ele irá publicar apenas 1 por segundo caso o tempo aqui seja 1000, e também com o
+        intuito de melhorar a performance dos terminais com Mini PCs defasados, pode-se aumentar esse tempo, sem correr o 
+        risco de perder imagens para OCR como no método antigo, antes era possível fazer 1 OCR a cada 2 segundos, agora é
+        possível fazer 2 OCRs em 2 segundos, e enviar apenas 1 placa a cada 2 segundos. Por padrão o tempo é 1000, e ele varia
+        entre 800 e 2000.</li>
+        <strong><em></em></strong>
+        <li><strong>parking_spaces_quantity</strong> é a quantidade de vagas que serão monitoradas no método "<em>segmentation</em>", entre 1 e 4 vagas.</li>
+        <li><strong>park_ids</strong> são os ids das vagas que serão monitoradas no método "<em>segmentation</em>", entre 1 e 4 vagas.</li>
+    </ul>
+</blockquote>
+
+<p style="text-align: justify;">
+<strong>1.2</strong> Para adicionar outras câmeras basta seguir o layout, e repetir os parâmetros com seus devidos
+valores.
+</p>
+<p style="text-align: justify;">
+<strong>1.3</strong> Caso seja uma migração e exista um arquivo supervisord.conf com as configurações das câmeras,
+pode-se utilizar um conversor de supervisor para json, execute os passos abaixo para usá-lo.
+</p>
+
+<pre><code class="language-bash">gdown 1UVEM4WeaugcTujOQ7G2MPVBP3RPlPsp_
+chmod +x converter_sup_to_docker
+./converter_sup_to_docker
+</code></pre>
+<blockquote>
+<p>Isso irá gerar um <code>config.json</code> na pasta /instalacoes, que poderá ser copiado para o docker 
+fazer a leitura das câmeras.  </p>
+</blockquote>
+<h3 id="funcionamento-do-sistema-wps_lpr">Funcionamento do sistema WPS_LPR</h3>
+<p style="text-align: justify;">
+<strong>2.</strong> O sistema assim que o container for iniciado já estará funcionando com as câmeras cadastradas no 
+arquivo <code>/var/lib/ParkingPlus/WpsLpr/config/config.json</code>, qualquer alteração no arquivo o sistema
+processará as alterações, e fará a devida ação, que poderá ser adicionar uma nova câmera, remover 
+uma câmera, alterar algum parâmetro de alguma câmera:
+</p>
+
+<h3 id="consultando-logs-do-sistema">Consultando Logs do Sistema</h3>
+<p><strong>3.</strong> As informações do sistema WPS_LPR, poderão ser consultadas pelo log <em>journal</em>, pelo comando:</p>
+<pre><code class="language-bash">journalctl CONTAINER_TAG=ParkingPlus:WPS_LPR
+</code></pre>
+<blockquote>
+<p>Oportunamente pode se passar o parâmetro -f, para visualizar o log em tempo real.  </p>
+<p><code>journalctl -f CONTAINER_TAG=ParkingPlus:WPS_LPR --output cat</code></p>
+</blockquote>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .code-block {
+            font-size: 0.7em; /* Ajusta o tamanho da fonte */
+            white-space: pre-wrap; /* Permite quebras de linha no conteúdo pre */
+        }
+    </style>
+    <title>Exemplo de Código</title>
+</head>
+<body>
+    <p style="text-align: justify;">
+        <strong>3.1</strong> A saída do comando será conforme abaixo:
+    </p>
+    <details>
+        <summary>Clique para expandir</summary>
+        <pre class="code-block">
+2000-01-01 00:00:00,327 | INFO: ENTG1A_GYN | Conectando camera: 10.62.65.31:1
+2000-01-01 00:00:00,328 | INFO: ENTG1B_GYN | Conectando camera: 10.62.65.32:1
+2000-01-01 00:00:00,328 | INFO: ENT1718ESQ_GYN | Conectando camera: 10.62.65.33:1
+2000-01-01 00:00:03,819 | INFO: ENTG1A_GYN | Camera conectada: 10.62.65.31
+2000-01-01 00:00:03,820 | INFO: ENTG1A_GYN | Limiar de movimento: 10 | OCR por Segundo : 1
+2000-01-01 00:00:07,053 | INFO: ENTG1B_GYN | Camera conectada: 10.62.65.32
+2000-01-01 00:00:07,054 | INFO: ENTG1B_GYN | Limiar de movimento: 10 | OCR por Segundo : 1
+2000-01-01 00:00:07,287 | INFO: ENTG1A_GYN | Frame número: 10 | Placa: SBZ3J28 | Confianca: 1.0
+2000-01-01 00:00:09,271 | INFO: ENTG1A_GYN | Frame número: 12 | Placa: SBZ3J28 | Confianca: 1.0
+2000-01-01 00:00:09,305 | INFO: ENT1718ESQ_GYN | Camera conectada: 10.62.65.33
+2000-01-01 00:00:14,292 | INFO: ENTG1A_GYN | Frame número: 14 | Placa: SBZ3J28 | Confianca: 1.0
+2000-01-01 00:01:29,448 | INFO: ENT1718ESQ_GYN | Frame número: 25 | Placa: NKX7007 | Confianca: 1.0
+2000-01-01 00:01:29,775 | INFO: ENTG1B_GYN | Frame número: 91 | Placa: SDA6F87 | Confianca: 1.0
+2000-01-01 00:01:30,651 | INFO: ENT1718ESQ_GYN | Frame número: 26 | Placa: NKX7007 | Confianca: 1.0
+2000-01-01 00:01:31,291 | INFO: ENTG1B_GYN | Frame número: 93 | Placa: SDA6F87 | Confianca: 1.0
+2000-01-01 00:01:35,773 | ERROR: SAIE2DIR | O IP 10.62.65.45 não respondeu. Tentando novamente em 30 segundos...
+        </pre>
+    </details>
+</body>
+</html>
+
+<h4 id="alterando-nivel-de-log">Alterando nível de log</h4>
+<p><strong>4.</strong> Para alterar o nível de log, altere o arquivo:</p>
+<pre><code class="language-bash">/var/lib/ParkingPlus/WpsLpr/config/settings.xml
+</code></pre>
+<p style="text-align: justify;">
+Caso o arquivo não exista, utilize o sample na pasta para criá-lo, e altere o nível caso seja 
+necessário. O log vem configurado com nível <em>INFO</em>, que exibe as informações conforme acima, caso 
+queira depurar alguma informação, como o tempo gasto em cada etapa, altere para <em>DEBUG</em> ou <em>TRACE</em>,
+e após as analises realizadas, retorne para <em>INFO</em>.
+</p>
+
+<pre><code class="language-xml">&lt;settings&gt;
+  &lt;log_level&gt;INFO&lt;/log_level&gt;
+&lt;/settings&gt;
+</code></pre>
+<p style="text-align: justify;">
+<em></em>
+<strong>4.1</strong> A partir da versão 2.6.0 a mudança no nível do LOG será dinâmica, ou seja ao alterar no arquivo o LOG já passará a 
+exibir o LOG nesse nível sem a necessidade de reiniciar a aplicação.
+</p>
+
+<h3 id="verificando-cameras-online-no-sistema">Verificando câmeras online no sistema</h3>
+<p><strong>5.</strong> Para verificar quantas e quais câmeras são, é necessário fazer uma requisição GET HTTP,
+no seguinte endpoint:</p>
+<pre><code class="language-bash">http://ip_do_servidor_lpr:5000/cgi-bin/running_cameras.cgi
+</code></pre>
+<p><strong>5.1</strong> O retorno da requisição será algo do tipo:</p>
+<details>
+<summary>Clique para expandir</summary>
+<pre>
+Cameras offline
+"SAIE2DIR - 10.62.65.45 (Offline) - SAIE2DIR - 10.62.65.45 (Offline)"
+Cameras online
+"ENTG1A - 10.62.65.31 (Online) - ENTG1B - 10.62.65.32 (Online) -
+ ENT1718ESQ - 10.62.65.33 (Online)  - ENT1718DIR - 10.62.65.34 (Online) -
+ ENTE1 - 10.62.65.36 (Online) - ENTE2ESQ - 10.62.65.37 (Online)  -
+ ENTE2DIR - 10.62.65.38 (Online) - SAI1718ESQ - 10.62.65.41 (Online) ...
+ - SAIE1 - 10.62.65.44 (Online) - SAIE3 - 10.62.65.46 (Online)"
+Total de cameras offline
+2
+Total de cameras online
+24
+</pre>
+</details>
+
+<h3 id="solicitando-um-snaphot-de-uma-camera">Solicitando um snaphot de uma câmera</h3>
+<p><strong>6.</strong> Para solicitar um snapshot, é necessário fazer uma requisição GET HTTP, no seguinte endpoint:</p>
+<pre><code>http://ip_do_servidor_lpr:5000/cgi-bin/snapshot.cgi
+</code></pre>
+<p><strong>6.1</strong> É necessário passar também o argumento <code>wps_topic</code>, exemplo:</p>
+<pre><code>http://127.0.0.1:5000/cgi-bin/snapshot.cgi?wps_topic=TESTE
+</code></pre>
+<p>O sistema retornará imediatamente a última imagem salva em buffer referente ao <code>wps_topic</code> fornecido.</p>
+<p>Segue um exemplo de resposta da solicitação enviada:</p>
+<pre><code class="language-json">{
+    &quot;timestamp&quot;: timestamp, 
+    &quot;object_type&quot;: object_type,
+        &quot;imagem&quot;: {
+            &quot;data&quot;: snapshot_lpr,
+            &quot;type&quot;: &quot;image/jpg&quot;,
+            }
+}
+</code></pre>
+<blockquote>
+<p>As imagens estão codificadas em base64, com resolução 1280x720 e formato JPG.</p>
+</blockquote>
+<h3 id="verificando-quantidade-de-threads">Verificando quantidade de Threads</h3>
+<p><strong>7.</strong> Para verificar quantas threads do sistema WPS_LPR estão ativas, basta fazer uma requisição 
+GET HTTP no endpoint abaixo:</p>
+<pre><code class="language-bash">http://ip_do_servidor_lpr:5000/cgi-bin/threads.cgi
+</code></pre>
+<p>O retorno será a quantidade de threads em execução, usado para DEBUG.</p>
+<h3 id="reiniciando-a-aplicacao">Reiniciando a aplicação</h3>
+<p><strong>8.</strong> Para reiniciar o sistema WPS_LPR, utilize o endpoint abaixo:</p>
+<pre><code>http://ip_do_servidor_lpr:5000/cgi-bin/reboot_wpslpr.cgi
+</code></pre>
+<h3 id="verificando-vagas-do-modo-segmentation">Verificando vagas do modo <em>Segmentation</em></h3>
+<p><strong>9.</strong> Para obter a lista das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
+<pre><code>http://ip_do_servidor_lpr:5000/general/spaces
+</code></pre>
+<blockquote>
+<p>O sistema retornará algo como:</p>
+</blockquote>
+<pre><code>{
+    &quot;id&quot;: 1,
+    &quot;name&quot;: WPS_LPR Vaga 1&quot;,
+    &quot;sectorId&quot;: 1,
+    &quot;sectorName&quot;: WPS,
+    &quot;levelId&quot;: 1,
+    &quot;levelName&quot;: G1,
+    &quot;parkingId&quot;: 1,
+    &quot;parkingName&quot;: WPS G1,
+    &quot;tariffZone&quot;: 1,
+    &quot;disabled&quot;: False,
+    &quot;handicap&quot;: False,
+    &quot;xCoord&quot;: 0,
+    &quot;yCoord&quot;: 0
+}
+</code></pre>
+<p><strong>10.</strong> Para obter uma atualização das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
+<pre><code>http://ip_do_servidor_lpr:5000/parkingSpaces/status/x
+</code></pre>
+<blockquote>
+<p>Onde "<strong>x</strong>" é o tempo em segundos considerados para a consulta</p>
+</blockquote>
+<p><strong><em></em></strong></p>
+<h3 id="obtendo-a-placa-com-o-modo-rekognition">Obtendo a placa com o modo Rekognition</h3>
+<p><strong>11.</strong> Para submeter uma imagem única para reconhecer a placa, utilize o método "<em><strong>rekognition</strong></em>" </p>
+<pre><code>http://ip_do_servidor_lpr:5000/cgi-bin/rekognition.cgi
+</code></pre>
+<p style="text-align: justify;">
+A imagem pode estar nas extensões, <strong>bmp</strong>, <strong>jpg</strong> ou <strong>png</strong>, também é aceito 
+em <strong>base64</strong>. Para enviar, utilize o método POST, no corpo da mensagem coloque <em>image</em> 
+na <em>key</em>, e a imagem que quer submeter em <em>value</em>. O retorno da solicitação será o seguinte:
+</p>
+
+<pre><code>{
+    &quot;timestamp&quot;: &quot;2024-11-07 14:47:28.931&quot;,
+    &quot;object_type&quot;: &quot;CAR&quot;,
+    &quot;coor_object&quot;: {
+        &quot;xmin&quot;: 183,
+        &quot;xmax&quot;: 857,
+        &quot;ymin&quot;: 171,
+        &quot;ymax&quot;: 558
+    },
+    &quot;plate_number&quot;: &quot;SDH1I20&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;car_model&quot;: &quot;RAM - rampage&quot;
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Rodapé">
+      
+        
+        <a href="instalacao.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Instalação" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Instalação
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="erros.html" class="md-footer__link md-footer__link--next" aria-label="Próximo: Erros Comuns" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              Erros Comuns
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; WPS Brasil Ltda. Todos os Direitos Reservados.
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": ".", "features": ["navigation.indexes", "navigation.sectionsnna", "navigation.expand", "navigation.tracking"], "translations": {"clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.placeholder": "Digite para iniciar a busca", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.term.missing": "Ausente", "select.version.title": "Selecione a vers\u00e3o"}, "search": "assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike"}}</script>
+    
+
+
+    
+      <script src="assets/javascripts/bundle.bc35569b.min.js"></script>
+      
+    
+  </body>
+</html>
