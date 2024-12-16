@@ -36,7 +36,8 @@ Arquivos:
 1. Clique em **Authorize API**.
 2. Escolha sua conta da **wps-sa**.
 3. Clique em **Exchange authorization code for tokens**.
-4. Copie o **Access Token** e substitua em `access_token` na chamada do `curl` abaixo.
+4. Copie o **Access Token** e substitua em `access_token` na chamada do `curl` abaixo. Ou crie um variavel de ambiente com o conteúdo, token.
+
 
 ### Parâmetros para download da imagem
 - **BUCKET_NAME**: `lpr-wps-v1`
@@ -52,7 +53,7 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 #### Exemplo de Uso
 ```bash
 curl -X GET \
-  -H "Authorization: Bearer yasdslk...00198" \
+  -H "Authorization: Bearer $token" \
   -o "/instalacoes/ParkingPlus-WPSLPR-2.7.0.tgz" \
   "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.0.tgz?alt=media"
 ```
