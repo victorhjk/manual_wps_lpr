@@ -606,14 +606,14 @@ devidamente instaladas, para consultar quais são elas e o procedimento de insta
 seção <a href="configuracao_sistema_operacional.html">Configuração Sistema Operacional</a>. Siga estas etapas para configurar o ambiente de
 desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 <p>Versâo Atual: </p>
-<pre><code class="language-bash">&quot;2.7.0&quot;
+<pre><code class="language-bash">&quot;2.7.3&quot;
 </code></pre>
 <ul>
 <li>Baixe a imagem ParkingPlus:WPS_LPR mais recente disponível no respositório.</li>
 </ul>
 <p>Arquivos:</p>
-<pre><code>- ParkingPlus-WPSLPR-2.7.0.tgz
-- ParkingPlus-WPSLPR-2.7.0_cpu.tgz
+<pre><code>- ParkingPlus-WPSLPR-2.7.3.tgz
+- ParkingPlus-WPSLPR-2.7.3_cpu.tgz
 </code></pre>
 <h3 id="gerar-token-para-autenticacao">Gerar token para autenticação:</h3>
 <p><a href="https://developers.google.com/oauthplayground/?hl=pt-br">OAuth Playground</a></p>
@@ -643,8 +643,8 @@ desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 <h4 id="exemplo-de-uso">Exemplo de Uso</h4>
 <pre><code class="language-bash">curl -X GET \
   -H &quot;Authorization: Bearer $token&quot; \
-  -o &quot;/instalacoes/ParkingPlus-WPSLPR-2.7.0.tgz&quot; \
-  &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.0.tgz?alt=media&quot;
+  -o &quot;/instalacoes/ParkingPlus-WPSLPR-2.7.3.tgz&quot; \
+  &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.3.tgz?alt=media&quot;
 </code></pre>
 <h3 id="instalacao-de-pacotes-necessarios">Instalação de pacotes necessários</h3>
 <ul>
