@@ -628,7 +628,7 @@ desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 </li>
 <li>Escolha sua conta da <strong>wps-sa</strong>.</li>
 <li>Clique em <strong>Exchange authorization code for tokens</strong>.</li>
-<li>Copie o <strong>Access Token</strong> e substitua em <code>access_token</code> na chamada do <code>curl</code> abaixo.</li>
+<li>Copie o <strong>Access Token</strong> e substitua em <code>access_token</code> na chamada do <code>curl</code> abaixo. Ou crie um variavel de ambiente com o conteúdo, token.</li>
 </ul>
 <h3 id="parametros-para-download-da-imagem">Parâmetros para download da imagem</h3>
 <ul>
@@ -642,7 +642,7 @@ desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 </code></pre>
 <h4 id="exemplo-de-uso">Exemplo de Uso</h4>
 <pre><code class="language-bash">curl -X GET \
-  -H &quot;Authorization: Bearer yasdslk...00198&quot; \
+  -H &quot;Authorization: Bearer $token&quot; \
   -o &quot;/instalacoes/ParkingPlus-WPSLPR-2.7.0.tgz&quot; \
   &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.0.tgz?alt=media&quot;
 </code></pre>
