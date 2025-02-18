@@ -15,7 +15,7 @@ Versâo Atual:
 ```
 ### ⚠️ Atenção
 Essa imagem não é retrocompatível com outras versões, caso deseje voltar para uma
-versão anterior, o ParkingPlus-MQTT precisa ser desabilitado.
+versão anterior do _ParkingPlus:WPS_LPR:2.7.0_, o ParkingPlus-MQTT precisa ser desabilitado.
 
 * Baixe a imagem ParkingPlus:MQTT mais recente disponível no respositório.
 

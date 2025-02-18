@@ -221,6 +221,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -228,7 +243,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -247,13 +262,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_3">
           Configuração
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Configuração" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Configuração
         </label>
@@ -606,14 +621,14 @@ devidamente instaladas, para consultar quais são elas e o procedimento de insta
 seção <a href="configuracao_sistema_operacional.html">Configuração Sistema Operacional</a>. Siga estas etapas para configurar o ambiente de
 desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 <p>Versâo Atual: </p>
-<pre><code class="language-bash">&quot;2.7.3&quot;
+<pre><code class="language-bash">&quot;2.9.0&quot;
 </code></pre>
 <ul>
 <li>Baixe a imagem ParkingPlus:WPS_LPR mais recente disponível no respositório.</li>
 </ul>
 <p>Arquivos:</p>
-<pre><code>- ParkingPlus-WPSLPR-2.7.3.tgz
-- ParkingPlus-WPSLPR-2.7.3_cpu.tgz
+<pre><code>- ParkingPlus-WPSLPR-2.9.0_gpu.tgz
+- ParkingPlus-WPSLPR-2.9.0_cpu.tgz
 </code></pre>
 <h3 id="gerar-token-para-autenticacao">Gerar token para autenticação:</h3>
 <p><a href="https://developers.google.com/oauthplayground/?hl=pt-br">OAuth Playground</a></p>
@@ -633,7 +648,7 @@ desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 <h3 id="parametros-para-download-da-imagem">Parâmetros para download da imagem</h3>
 <ul>
 <li><strong>BUCKET_NAME</strong>: <code>lpr-wps-v1</code></li>
-<li><strong>OBJECT_NAME</strong>: nome do arquivo (ex.: <code>ParkingPlus-WPSLPR-2.7.0.tgz</code>)</li>
+<li><strong>OBJECT_NAME</strong>: nome do arquivo (ex.: <code>ParkingPlus-WPSLPR-2.9.0_gpu.tgz</code>)</li>
 <li><strong>SAVE_TO_LOCATION</strong>: local onde deseja salvar o arquivo</li>
 </ul>
 <pre><code class="language-bash">curl -X GET \ -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; \ 
@@ -643,8 +658,8 @@ desenvolvimento e executar o container com o sistema WPS_LPR:</p>
 <h4 id="exemplo-de-uso">Exemplo de Uso</h4>
 <pre><code class="language-bash">curl -X GET \
   -H &quot;Authorization: Bearer $token&quot; \
-  -o &quot;/instalacoes/ParkingPlus-WPSLPR-2.7.3.tgz&quot; \
-  &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.3.tgz?alt=media&quot;
+  -o &quot;/instalacoes/ParkingPlus-WPSLPR-2.9.0_gpu.tgz&quot; \
+  &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.0_gpu.tgz?alt=media&quot;
 </code></pre>
 <h3 id="instalacao-de-pacotes-necessarios">Instalação de pacotes necessários</h3>
 <ul>

@@ -12,15 +12,15 @@ desenvolvimento e executar o container com o sistema WPS_LPR:
 
 Versâo Atual: 
 ```bash
-"2.7.3"
+"2.9.0"
 ```
 
 * Baixe a imagem ParkingPlus:WPS_LPR mais recente disponível no respositório.
 
 Arquivos:
 ```
-- ParkingPlus-WPSLPR-2.7.3.tgz
-- ParkingPlus-WPSLPR-2.7.3_cpu.tgz
+- ParkingPlus-WPSLPR-2.9.0_gpu.tgz
+- ParkingPlus-WPSLPR-2.9.0_cpu.tgz
 ```
 
 
@@ -41,7 +41,7 @@ Arquivos:
 
 ### Parâmetros para download da imagem
 - **BUCKET_NAME**: `lpr-wps-v1`
-- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-WPSLPR-2.7.0.tgz`)
+- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-WPSLPR-2.9.0_gpu.tgz`)
 - **SAVE_TO_LOCATION**: local onde deseja salvar o arquivo
 
 ```bash
@@ -54,8 +54,8 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 ```bash
 curl -X GET \
   -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-WPSLPR-2.7.3.tgz" \
-  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.7.3.tgz?alt=media"
+  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.0_gpu.tgz" \
+  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.0_gpu.tgz?alt=media"
 ```
 
 ### Instalação de pacotes necessários

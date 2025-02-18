@@ -34,6 +34,7 @@ extra:
                    # https://colab.research.google.com/drive/1wShWQsGRfBtQbpsqzplDsiuTwba5mEa9?usp=sharing
 nav:
   - Inicio: index.md
+  - Releases: releases.md
   - Configuração:
     - Configuração Sistema Operacional: configuracao_sistema_operacional.md
     - Instalação MQTT: instalacao_mqtt.md

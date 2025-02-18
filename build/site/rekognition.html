@@ -221,6 +221,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="releases.html" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -228,7 +243,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -247,13 +262,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_3">
           Configuração
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Configuração" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Configuração
         </label>
@@ -696,7 +711,7 @@
 <p>O endpoint processa uma imagem de um veículo utilizando um modelo de Reconhecimento Automático de Placas (LPR) para extrair a placa, identificar o tipo de veículo e retornar as coordenadas do objeto detectado.</p>
 <h4 id="2-url-do-endpoint"><strong>2. URL do Endpoint</strong></h4>
 <ul>
-<li><strong>URL:</strong> <code>http://ip_wpslpr:5000/cgi-bin/rekognition.cgi</code></li>
+<li><strong>URL:</strong> <code>http://ip_wpslpr:5000/api/v0/rekognition</code></li>
 <li><strong>Método HTTP:</strong> <code>POST</code></li>
 </ul>
 <hr />
@@ -710,7 +725,7 @@
 <h5 id="envio-com-binario-multipartform-data"><strong>Envio com Binário (multipart/form-data)</strong></h5>
 <p>Ao utilizar o formato <code>multipart/form-data</code>, a imagem é enviada diretamente no corpo da requisição, com a chave <code>image</code>.</p>
 <pre><code class="language-bash">POST /rekognition HTTP/1.1
-Host: http://ip_wpslpr:5000/cgi-bin/rekognition.cgi`
+Host: http://ip_wpslpr:5000/api/v0/rekognition`
 Content-Type: multipart/form-data
 
 {
@@ -720,7 +735,7 @@ Content-Type: multipart/form-data
 <h5 id="envio-com-base64-applicationjson"><strong>Envio com Base64 (application/json)</strong></h5>
 <p>Quando a imagem estiver codificada em base64, ela deve ser enviada no formato <code>application/json</code>, usando também a chave <code>image</code>.</p>
 <pre><code class="language-bash">POST /rekognition HTTP/1.1
-Host: http://ip_wpslpr:5000/cgi-bin/rekognition.cgi
+Host: http://ip_wpslpr:5000/api/v0/rekognition
 Content-Type: application/json
 
 {
@@ -730,12 +745,12 @@ Content-Type: application/json
 <hr />
 <h4 id="5-exemplo-de-requisicao"><strong>5. Exemplo de Requisição</strong></h4>
 <h5 id="envio-de-imagem-em-binario"><strong>Envio de Imagem em Binário</strong></h5>
-<pre><code class="language-bash">curl -X POST &quot;http://ip_wpslpr:5000/cgi-bin/rekognition.cgi&quot; \
+<pre><code class="language-bash">curl -X POST &quot;http://ip_wpslpr:5000/api/v0/rekognition&quot; \
 -H &quot;Content-Type: multipart/form-data&quot; \
 -F &quot;image=@carro.jpg&quot;
 </code></pre>
 <h5 id="envio-de-imagem-em-base64"><strong>Envio de Imagem em Base64</strong></h5>
-<pre><code class="language-bash">curl -X POST &quot;http://ip_wpslpr:5000/cgi-bin/rekognition.cgi&quot; \
+<pre><code class="language-bash">curl -X POST &quot;http://ip_wpslpr:5000/api/v0/rekognition&quot; \
 -H &quot;Content-Type: application/json&quot; \
 -d '{
   &quot;image&quot;: &quot;/9j/4AAQSkZJRgABAQAAAQABAAD...&quot;

@@ -194,22 +194,33 @@ journalctl CONTAINER_TAG=ParkingPlus:WPS_LPR
     <details>
         <summary>Clique para expandir</summary>
         <pre class="code-block">
-2000-01-01 00:00:00,327 | INFO: ENTG1A_GYN | Conectando camera: 10.62.65.31:1
-2000-01-01 00:00:00,328 | INFO: ENTG1B_GYN | Conectando camera: 10.62.65.32:1
-2000-01-01 00:00:00,328 | INFO: ENT1718ESQ_GYN | Conectando camera: 10.62.65.33:1
-2000-01-01 00:00:03,819 | INFO: ENTG1A_GYN | Camera conectada: 10.62.65.31
-2000-01-01 00:00:03,820 | INFO: ENTG1A_GYN | Limiar de movimento: 10 | OCR por Segundo : 1
-2000-01-01 00:00:07,053 | INFO: ENTG1B_GYN | Camera conectada: 10.62.65.32
-2000-01-01 00:00:07,054 | INFO: ENTG1B_GYN | Limiar de movimento: 10 | OCR por Segundo : 1
-2000-01-01 00:00:07,287 | INFO: ENTG1A_GYN | Frame número: 10 | Placa: SBZ3J28 | Confianca: 1.0
-2000-01-01 00:00:09,271 | INFO: ENTG1A_GYN | Frame número: 12 | Placa: SBZ3J28 | Confianca: 1.0
-2000-01-01 00:00:09,305 | INFO: ENT1718ESQ_GYN | Camera conectada: 10.62.65.33
-2000-01-01 00:00:14,292 | INFO: ENTG1A_GYN | Frame número: 14 | Placa: SBZ3J28 | Confianca: 1.0
-2000-01-01 00:01:29,448 | INFO: ENT1718ESQ_GYN | Frame número: 25 | Placa: NKX7007 | Confianca: 1.0
-2000-01-01 00:01:29,775 | INFO: ENTG1B_GYN | Frame número: 91 | Placa: SDA6F87 | Confianca: 1.0
-2000-01-01 00:01:30,651 | INFO: ENT1718ESQ_GYN | Frame número: 26 | Placa: NKX7007 | Confianca: 1.0
-2000-01-01 00:01:31,291 | INFO: ENTG1B_GYN | Frame número: 93 | Placa: SDA6F87 | Confianca: 1.0
-2000-01-01 00:01:35,773 | ERROR: SAIE2DIR | O IP 10.62.65.45 não respondeu. Tentando novamente em 30 segundos...
+2000-01-01 00:00:54.033 | INFO: ENT_PRINC_3_FRONTAL | [SNAPSHOT] | Placa detectada: PRZ4B93 | Tipo de Veículo: CAR | Marca/Modelo do Veículo: VOLKSWAGEN - POLO
+2000-01-01 00:00:54.525 | INFO: ENT_PRINC_2_FRONTAL | [SNAPSHOT] | Placa detectada: JIR0H44 | Tipo de Veículo: CAR
+2000-01-01 00:01:01.109 | INFO: ENT_PRINC_1_FRONTAL | [SNAPSHOT] | Placa detectada: JJV7842 | Tipo de Veículo: CAR
+2000-01-01 00:01:04.525 | INFO: ENT_PRINC_1_TRASEIRA | [SNAPSHOT] | Placa detectada: JJV7842 | Tipo de Veículo: CAR
+2000-01-01 00:01:05.330 | INFO: ENT_PRINC_1_FRONTAL | [SNAPSHOT] | Placa detectada: JJV7842 | Tipo de Veículo: CAR
+2000-01-01 00:01:08.327 | INFO: ENT_SUL_1_FRONTAL | [SNAPSHOT] | Placa detectada: PRO6225 | Tipo de Veículo: CAR | Marca/Modelo do Veículo: TOYOTA - YARIS
+2000-01-01 00:01:11.355 | INFO: ENT_SUL_1_TRASEIRA | [SNAPSHOT] | Placa detectada: PRO6225 | Tipo de Veículo: CAR
+2000-01-01 00:01:12.203 | INFO: ENT_SUL_1_FRONTAL | [SNAPSHOT] | Placa detectada: PRO6225 | Tipo de Veículo: CAR | Marca/Modelo do Veículo: TOYOTA - YARIS
+2000-01-01 00:01:20.439 | INFO: ENT_TOK_STOK_2_FRONTAL | [SNAPSHOT] | Placa detectada: SDK5G47 | Tipo de Veículo: CAR
+2000-01-01 00:01:33.051 | INFO: ENT_SUL_2_FRONTAL | [SNAPSHOT] | Placa detectada: SSG1C35 | Tipo de Veículo: CAR
+2000-01-01 00:01:36.270 | INFO: ENT_SUL_2_TRASEIRA | [SNAPSHOT] | Placa detectada: SSG1C35 | Tipo de Veículo: CAR
+2000-01-01 00:01:37.016 | INFO: ENT_SUL_2_FRONTAL | [SNAPSHOT] | Placa detectada: SSG1C35 | Tipo de Veículo: CAR
+2000-01-01 00:01:38.034 | INFO: SAI_2_SUL_FRENTE | [SNAPSHOT] | Placa detectada: SYV8D43 | Tipo de Veículo: CAR
+2000-01-01 00:01:41.138 | INFO: SAI_2_SUL_TRASEIRA | [SNAPSHOT] | Placa detectada: SYV8D43 | Tipo de Veículo: CAR
+2000-01-01 00:01:41.974 | INFO: SAI_2_SUL_FRENTE | [SNAPSHOT] | Placa detectada: SYV8D43 | Tipo de Veículo: CAR | Marca/Modelo do Veículo: FIAT - ARGO
+2000-01-01 00:01:42.363 | INFO: ENT_TOK_STOK_1_FRONTAL | [SNAPSHOT] | Placa detectada: SCQ1H08 | Tipo de Veículo: CAR
+2000-01-01 00:01:46.859 | INFO: ENT_TOK_STOK_1_FRONTAL | [SNAPSHOT] | Placa detectada: SCQ1H08 | Tipo de Veículo: CAR
+2000-01-01 00:01:47.560 | INFO: SAI_SUL_3_TRASEIRA | [SNAPSHOT] | Placa detectada: PQH2967 | Tipo de Veículo: CAR
+2000-01-01 00:01:49.070 | INFO: SAI_SUL_3_FRONTAL | [SNAPSHOT] | Placa detectada: PQH2967 | Tipo de Veículo: CAR
+2000-01-01 00:01:57.925 | INFO: ENT_PRINC_2_FRONTAL | [SNAPSHOT] | Placa detectada: NDO7C97 | Tipo de Veículo: CAR
+2000-01-01 00:01:58.670 | INFO: ENT_3_NORTE_FRENTE | [SNAPSHOT] | Placa detectada: QUH3A03 | Tipo de Veículo: CAR
+2000-01-01 00:01:59.684 | INFO: ENT_PRINC_2_TRASEIRA | [SNAPSHOT] | Placa detectada: NDO7C97 | Tipo de Veículo: CAR
+2000-01-01 00:02:01.278 | INFO: ENT_3_NORTE_TRASEIRA | [SNAPSHOT] | Placa detectada: QUH3A03 | Tipo de Veículo: CAR
+2000-01-01 00:03:28.210 | INFO: ENT_MOTO_1 | Frame número: 705 | Placa: SCN3A36 | Confianca: 1.0
+2000-01-01 00:03:29.215 | INFO: ENT_MOTO_1 | Frame número: 706 | Placa: SCN3A36 | Confianca: 1.0
+2000-01-01 00:03:30.218 | INFO: ENT_MOTO_1 | Frame número: 707 | Placa: SCN3A36 | Confianca: 1.0
+2000-01-01 00:03:31.224 | INFO: ENT_MOTO_1 | Frame número: 708 | Placa: SCN3A36 | Confianca: 1.0
         </pre>
     </details>
 </body>
@@ -244,37 +255,51 @@ exibir o LOG nesse nível sem a necessidade de reiniciar a aplicação.
 no seguinte endpoint:
 
 ```bash
-http://ip_do_servidor_lpr:5000/cgi-bin/running_cameras.cgi
+http://ip_do_servidor_lpr:5000/api/v0/running_cameras
 ```
 **5.1** O retorno da requisição será algo do tipo:
 
 <details>
 <summary>Clique para expandir</summary>
 <pre>
-Cameras offline
-"SAIE2DIR - 10.62.65.45 (Offline) - SAIE2DIR - 10.62.65.45 (Offline)"
-Cameras online
-"ENTG1A - 10.62.65.31 (Online) - ENTG1B - 10.62.65.32 (Online) -
- ENT1718ESQ - 10.62.65.33 (Online)  - ENT1718DIR - 10.62.65.34 (Online) -
- ENTE1 - 10.62.65.36 (Online) - ENTE2ESQ - 10.62.65.37 (Online)  -
- ENTE2DIR - 10.62.65.38 (Online) - SAI1718ESQ - 10.62.65.41 (Online) ...
- - SAIE1 - 10.62.65.44 (Online) - SAIE3 - 10.62.65.46 (Online)"
-Total de cameras offline
-2
-Total de cameras online
-24
+{
+  "Cameras online": {
+    "LPR": [
+      "ENT_MOTO_2 - 192.168.8.127 (Online)",
+      "SAI_MOTO_1 - 192.168.8.143 (Online)",
+      "SAI_MOTO_2 - 192.168.8.144 (Online)",
+      "ENT_MOTO_1 - 192.168.8.126 (Online)"
+    ],
+    "WPS 360": [
+      "ENT_PRINC_2_TRASEIRA - 192.168.20.199 (Online)",
+      "ENT_PRINC_3_TRASEIRA - 192.168.20.190 (Online)",
+...
+      "SAI_SUL_3_FRONTAL - 192.168.20.196 (Online)",
+      "SAI_PRINC_3_FRONTAL - 192.168.20.219 (Online)"
+    ]
+  },
+  "Total de cameras online": 54,
+  "Cameras offline": {
+    "WPS 360": [
+      "SAI_LOJISTA_FRONTAL - 192.168.20.38 (Offline)",
+      "ENT_LOJISTA_TRASEIRA - 192.168.20.112 (Offline)"
+    ]
+  },
+  "Total de cameras offline": 2
+}
+
 </pre>
 </details>
 
-### Solicitando um snaphot de uma câmera
+### Solicitando um snapshot de uma câmera
 
 **6.** Para solicitar um snapshot, é necessário fazer uma requisição GET HTTP, no seguinte endpoint:
 ```
-http://ip_do_servidor_lpr:5000/cgi-bin/snapshot.cgi
+http://ip_do_servidor_lpr:5000/api/v0/snapshot
 ```
 **6.1** É necessário passar também o argumento `wps_topic`, exemplo:
 ```
-http://127.0.0.1:5000/cgi-bin/snapshot.cgi?wps_topic=TESTE
+http://127.0.0.1:5000/api/v0/snapshot?wps_topic=TESTE
 ```
 
 O sistema retornará imediatamente a última imagem salva em buffer referente ao `wps_topic` fornecido.
@@ -299,21 +324,215 @@ Segue um exemplo de resposta da solicitação enviada:
 GET HTTP no endpoint abaixo:
 
 ```bash
-http://ip_do_servidor_lpr:5000/cgi-bin/threads.cgi
+http://ip_do_servidor_lpr:5000/api/v0/threads
 ```
 O retorno será a quantidade de threads em execução, usado para DEBUG.
 
+**7.1** Para verificar o nome das threads em execução no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:
+```bash
+http://ip_do_servidor_lpr:5000/api/v0/threads_details
+```
+O retorno será o detalhamento das threads, para ajudar no processo de DEBUG.
+
+<details>
+<summary>Clique para expandir</summary>
+<pre>
+{
+  "thread_details": [
+    {
+      "name": "MainThread",
+      "id": 139885484580992
+    },
+    {
+      "name": "MonitorLogLevel",
+      "id": 139885465700032
+    },
+    {
+      "name": "pymongo_server_monitor_thread",
+      "id": 139883041511104
+    },
+    {
+      "name": "pymongo_kill_cursors_thread",
+      "id": 139883145090752
+    },
+    {
+      "name": "pymongo_server_rtt_thread",
+      "id": 139882454316736
+    },
+    {
+      "name": "Inotify (InotifyBuffer)",
+      "id": 139884727596736
+    },
+    {
+      "name": "Inotify (InotifyEmitter)",
+      "id": 139884735989440
+    },
+    {
+      "name": "Inotify (InotifyObserver)",
+      "id": 139884878599872
+    },
+    {
+      "name": "JSON monitoring",
+      "id": 139884886992576
+    },
+    {
+      "name": "Webserver WPS_LPR",
+      "id": 139885328078528
+    },
+    {
+      "name": "Schedule",
+      "id": 139885319685824
+    },
+    {
+      "name": "ThreadPoolExecutor-3_0",
+      "id": 139885172213440
+    },
+    {
+      "name": "ThreadPoolExecutor-3_1",
+      "id": 139884895385280
+    },
+    {
+      "name": "ThreadPoolExecutor-3_2",
+      "id": 139883058296512
+    },
+    {
+      "name": "ThreadPoolExecutor-3_3",
+      "id": 139883049903808
+    },
+    {
+      "name": "MQTT: SAI_MOTO_1",
+      "id": 139875802146496
+    },
+    {
+      "name": "MQTT: ENT_MOTO_1",
+      "id": 139880675927744
+    },
+    {
+      "name": "MQTT: ENT_MOTO_2",
+      "id": 139878863976128
+    },
+    {
+      "name": "Thread-826",
+      "id": 139878880761536
+    }
+  ],
+  "thread_types": {
+    "MainThread": 1,
+    "Daemon Threads": 8,
+    "ThreadPoolExecutor": 4,
+    "Inotify": 3,
+    "Others": 3
+  },
+  "total_active_threads": 19
+}
+
+</pre>
+</details>
+
+### Exibindo a versão do WPS_LPR
+
+**8.** Para verificar a versão do sistema, faça uma requisição GET HTTP no endpoint abaixo:
+
+```bash
+http://ip_do_servidor_lpr:5000/api/v0/version
+```
+```
+{
+  "version": "2.9.0"
+}
+```
+
+### Verificando as conexões no WPS_LPR
+
+**9.** Para verificar todas as conexões configuradas no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:
+
+```bash
+http://ip_do_servidor_lpr:5000/api/v0/connections
+```
+
+O retorno será a listagem das conexões configuradas no sistema.
+
+<details>
+<summary>Clique para expandir</summary>
+<pre>
+{
+  "lpr": [
+    {
+      "camera_id": "1",
+      "wps_topic": "ENT_MOTO_1",
+      "camera_ip": "192.168.8.126",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Moto",
+      "publish_interval": "1000 ms"
+    },
+    {
+      "camera_id": "2",
+      "wps_topic": "ENT_MOTO_2",
+      "camera_ip": "192.168.8.127",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Moto",
+      "publish_interval": "1000 ms"
+    },
+    {
+      "camera_id": "3",
+      "wps_topic": "SAI_MOTO_1",
+      "camera_ip": "192.168.8.143",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Moto",
+      "publish_interval": "1000 ms"
+    },
+    {
+      "camera_id": "4",
+      "wps_topic": "SAI_MOTO_2",
+      "camera_ip": "192.168.8.144",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Moto",
+      "publish_interval": "1000 ms"
+    }
+  ],
+  "context": [
+    {
+      "camera_id": "5",
+      "wps_topic": "ENT_PRINC_1_FRONTAL",
+      "camera_ip": "192.168.20.193",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Carro",
+      "publish_interval": "1000 ms"
+    },
+...
+    {
+      "camera_id": "55",
+      "wps_topic": "SAI_2_SUL_FRENTE",
+      "camera_ip": "192.168.20.225",
+      "ocr_time": "0/seg",
+      "ocr_mode": "Carro",
+      "publish_interval": "0 ms"
+    },
+    {
+      "camera_id": "56",
+      "wps_topic": "SAI_2_SUL_TRASEIRA",
+      "camera_ip": "192.168.20.195",
+      "ocr_time": "1/seg",
+      "ocr_mode": "Carro e Moto",
+      "publish_interval": "1000 ms"
+    }
+  ]
+}
+
+</pre>
+</details>
+
 ### Reiniciando a aplicação
 
-**8.** Para reiniciar o sistema WPS_LPR, utilize o endpoint abaixo:
+**10.** Para reiniciar o sistema WPS_LPR, utilize o endpoint abaixo:
 
 ```
-http://ip_do_servidor_lpr:5000/cgi-bin/reboot_wpslpr.cgi
+http://ip_do_servidor_lpr:5000/api/v0/reboot_wpslpr
 ```
 
 ### Verificando vagas do modo _Segmentation_
 
-**9.** Para obter a lista das vagas monitoradas pelas câmeras do tipo "**_segmentation_**":
+**11.** Para obter a lista das vagas monitoradas pelas câmeras do tipo "**_segmentation_**":
 
 ```
 http://ip_do_servidor_lpr:5000/general/spaces
@@ -338,7 +557,7 @@ http://ip_do_servidor_lpr:5000/general/spaces
 }
 ```
 
-**10.** Para obter uma atualização das vagas monitoradas pelas câmeras do tipo "**_segmentation_**":
+**12.** Para obter uma atualização das vagas monitoradas pelas câmeras do tipo "**_segmentation_**":
 
 ```
 http://ip_do_servidor_lpr:5000/parkingSpaces/status/x
@@ -349,10 +568,10 @@ http://ip_do_servidor_lpr:5000/parkingSpaces/status/x
 
 ### Obtendo a placa com o modo Rekognition
 
-**11.** Para submeter uma imagem única para reconhecer a placa, utilize o método "_**rekognition**_" 
+**13.** Para submeter uma imagem única para reconhecer a placa, utilize o método "_**rekognition**_" 
 
 ```
-http://ip_do_servidor_lpr:5000/cgi-bin/rekognition.cgi
+http://ip_do_servidor_lpr:5000/api/v0/rekognition
 ```
 <p style="text-align: justify;">
 A imagem pode estar nas extensões, <strong>bmp</strong>, <strong>jpg</strong> ou <strong>png</strong>, também é aceito 

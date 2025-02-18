@@ -10,7 +10,7 @@ Este manual descreve o processo de envio de imagens para o endpoint que processa
 O endpoint processa uma imagem de um veículo utilizando um modelo de Reconhecimento Automático de Placas (LPR) para extrair a placa, identificar o tipo de veículo e retornar as coordenadas do objeto detectado.
 
 #### **2. URL do Endpoint**
-- **URL:** `http://ip_wpslpr:5000/cgi-bin/rekognition.cgi`
+- **URL:** `http://ip_wpslpr:5000/api/v0/rekognition`
 - **Método HTTP:** `POST`
 
 ---
@@ -27,7 +27,7 @@ Ao utilizar o formato `multipart/form-data`, a imagem é enviada diretamente no 
 
 ```bash
 POST /rekognition HTTP/1.1
-Host: http://ip_wpslpr:5000/cgi-bin/rekognition.cgi`
+Host: http://ip_wpslpr:5000/api/v0/rekognition`
 Content-Type: multipart/form-data
 
 {
@@ -40,7 +40,7 @@ Quando a imagem estiver codificada em base64, ela deve ser enviada no formato `a
 
 ```bash
 POST /rekognition HTTP/1.1
-Host: http://ip_wpslpr:5000/cgi-bin/rekognition.cgi
+Host: http://ip_wpslpr:5000/api/v0/rekognition
 Content-Type: application/json
 
 {
@@ -55,7 +55,7 @@ Content-Type: application/json
 ##### **Envio de Imagem em Binário**
 
 ```bash
-curl -X POST "http://ip_wpslpr:5000/cgi-bin/rekognition.cgi" \
+curl -X POST "http://ip_wpslpr:5000/api/v0/rekognition" \
 -H "Content-Type: multipart/form-data" \
 -F "image=@carro.jpg"
 ```
@@ -63,7 +63,7 @@ curl -X POST "http://ip_wpslpr:5000/cgi-bin/rekognition.cgi" \
 ##### **Envio de Imagem em Base64**
 
 ```bash
-curl -X POST "http://ip_wpslpr:5000/cgi-bin/rekognition.cgi" \
+curl -X POST "http://ip_wpslpr:5000/api/v0/rekognition" \
 -H "Content-Type: application/json" \
 -d '{
   "image": "/9j/4AAQSkZJRgABAQAAAQABAAD..."
