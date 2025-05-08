@@ -1,2 +1,4 @@
 venv/
-.idea/manual.iml .idea/modules.xml .idea/vcs.xml
+.idea/manual.iml 
+.idea/modules.xml 
+.idea/vcs.xml
