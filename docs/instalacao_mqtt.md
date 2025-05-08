@@ -11,7 +11,7 @@ do ParkingPLUS-MQTT:
 
 Versâo Atual: 
 ```bash
-"1.0.0"
+"1.0.1"
 ```
 ### ⚠️ Atenção
 Essa imagem não é retrocompatível com outras versões, caso deseje voltar para uma
@@ -21,7 +21,7 @@ versão anterior do _ParkingPlus:WPS_LPR:2.7.0_, o ParkingPlus-MQTT precisa ser 
 
 Arquivos:
 ```
-- ParkingPlus-MQTT-1.0.0.tgz
+- ParkingPlus-MQTT-1.0.1.tgz
 ```
 
 
