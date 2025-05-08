@@ -11,7 +11,7 @@ do ParkingPLUS-MQTT:
 
 Versâo Atual: 
 ```bash
-"1.0.1"
+"1.0.2"
 ```
 ### ⚠️ Atenção
 Essa imagem não é retrocompatível com outras versões, caso deseje voltar para uma
@@ -21,7 +21,7 @@ versão anterior do _ParkingPlus:WPS_LPR:2.7.0_, o ParkingPlus-MQTT precisa ser 
 
 Arquivos:
 ```
-- ParkingPlus-MQTT-1.0.1.tgz
+- ParkingPlus-MQTT-1.0.2.tgz
 ```
 
 
@@ -41,7 +41,7 @@ Arquivos:
 
 ### Parâmetros para download da imagem
 - **BUCKET_NAME**: `lpr-wps-v1`
-- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-MQTT-1.0.0.tgz`)
+- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-MQTT-1.0.2.tgz`)
 - **SAVE_TO_LOCATION**: local onde deseja salvar o arquivo
 
 
@@ -55,8 +55,8 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 ```bash
 curl -X GET \
   -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-MQTT-1.0.0.tgz" \
-  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-MQTT-1.0.0.tgz?alt=media"
+  -o "/instalacoes/ParkingPlus-MQTT-1.0.2.tgz" \
+  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-MQTT-1.0.2.tgz?alt=media"
 ```
 
 ### Instalação de pacotes necessários
@@ -73,12 +73,12 @@ curl -X GET \
 
 * #### Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)
 ```bash
-pkplus-cli svc import-file ParkingPlus-MQTT-1.0.0.tgz
+pkplus-cli svc import-file ParkingPlus-MQTT-1.0.2.tgz
 ```
 
 * #### Após a importação inicie a imagem do MQTT com pkplus-cli
 ```bash
-pkplus-cli svc enable ParkingPlus:MQTT:1.0.0
+pkplus-cli svc enable ParkingPlus:MQTT:1.0.2
 ```
 
 <!DOCTYPE html>
