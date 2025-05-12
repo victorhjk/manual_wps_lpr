@@ -1,5 +1,10 @@
 # Releases WPS_LPR
 
+**2.9.1**
+
+* Correção do modelo de motos que não era importado, ao selecionar o modo LATAM. P.S: Só funciona com placas de motos brasileiras.
+
+
 **2.9.0**
 
 * Novo método para detecção de placa e tipo de objeto;
