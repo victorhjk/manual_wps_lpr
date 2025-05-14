@@ -69,7 +69,16 @@ curl -X GET \
 
 [Instalação pkplus-cli svc](instalacao.md#instale-o-pkplus-cli-ubuntu)
 
+> ⚠️ **Atenção!**
+> 
+> Execute o comando abaixo para criar a nova rede parkingplus_mqtt
+> 
+> Pare os Containers do MQTT e WPS_LPR primeiro
 
+```bash
+docker network rm parkingplus_mqtt
+docker network create   --driver bridge   --subnet=172.40.10.0/24   --gateway=172.40.10.1   parkingplus_mqtt
+```
 
 * #### Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)
 ```bash
