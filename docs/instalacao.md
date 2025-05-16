@@ -12,15 +12,15 @@ desenvolvimento e executar o container com o sistema WPS_LPR:
 
 Versâo Atual: 
 ```bash
-"2.9.1"
+"2.9.2"
 ```
 
 * Baixe a imagem ParkingPlus:WPS_LPR mais recente disponível no respositório.
 
 Arquivos:
 ```
-- ParkingPlus-WPSLPR-2.9.1_gpu.tgz
-- ParkingPlus-WPSLPR-2.9.1_cpu.tgz
+- ParkingPlus-WPSLPR-2.9.2_gpu.tgz
+- ParkingPlus-WPSLPR-2.9.2_cpu.tgz
 ```
 
 
@@ -41,7 +41,7 @@ Arquivos:
 
 ### Parâmetros para download da imagem
 - **BUCKET_NAME**: `lpr-wps-v1`
-- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-WPSLPR-2.9.1_gpu.tgz`)
+- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-WPSLPR-2.9.2_gpu.tgz`)
 - **SAVE_TO_LOCATION**: local onde deseja salvar o arquivo
 
 ```bash
@@ -49,46 +49,193 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 -o "<SAVE_TO_LOCATION>" \ 
 "https://storage.googleapis.com/storage/v1/b/<BUCKET_NAME>/o/<OBJECT_NAME>?alt=media"
 ```
+<!-- CSS para abas -->
+<style>
+:root {
+  --primary-color: #ff5722;
+}
 
-#### Exemplo de Uso
-```bash
-curl -X GET \
+[data-md-color-scheme="default"] {
+  --tab-bg: #f9f9f9;
+  --tab-hover: #eeeeee;
+  --tab-active: var(--primary-color);
+  --tab-content-bg: #fefefe;
+  --tab-border: #ddd;
+  --tab-text: #333;
+  --tab-active-text: white;
+}
+
+[data-md-color-scheme="slate"] {
+  --tab-bg: #2e2e2e;
+  --tab-hover: #3a3a3a;
+  --tab-active: var(--primary-color);
+  --tab-content-bg: #1f1f1f;
+  --tab-border: #444;
+  --tab-text: #eee;
+  --tab-active-text: white;
+}
+
+.tab {
+  overflow: hidden;
+  # border-radius: 6px 6px 0 0;
+  # background-color: var(--tab-bg);
+  # border: 1px solid var(--tab-border);
+  margin-bottom: 0;
+}
+
+.tab button {
+  background-color: var(--tab-bg);
+  border: none;
+  outline: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 12px;
+  color: var(--tab-text);
+  border-radius: 6px 6px 6px 6px;
+}
+
+.tab button:hover {
+  background-color: var(--tab-hover);
+}
+
+.tab button.active {
+  background-color: var(--tab-active);
+  color: var(--tab-active-text);
+}
+
+.tabcontent-platform,
+.tabcontent-system {
+  display: none;
+  padding: 2px;
+  # border: 1px solid var(--tab-border);
+  border-radius: 0 0 6px 6px;
+  # background-color: var(--tab-content-bg);
+  color: var(--tab-text);
+  margin-bottom: 1rem;
+}
+
+.tabcontent-platform pre,
+.tabcontent-system pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 2px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+
+</style>
+
+<h4>Exemplo de Uso</h4>
+
+<!-- Abas para GPU/CPU -->
+<div class="tab">
+  <button class="tablinks-platform" onclick="openTabPlatform(event, 'GPU')" id="defaultPlatform">GPU</button>
+  <button class="tablinks-platform" onclick="openTabPlatform(event, 'CPU')">CPU</button>
+</div>
+
+<!-- Conteúdo GPU -->
+<div id="GPU" class="tabcontent-platform">
+  <pre><code class="language-bash">curl -X GET \
   -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.1_gpu.tgz" \
-  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.1_gpu.tgz?alt=media"
-```
+  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2_gpu.tgz" \
+  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.2_gpu.tgz?alt=media"</code></pre>
+</div>
 
-### Instalação de pacotes necessários
+<!-- Conteúdo CPU -->
+<div id="CPU" class="tabcontent-platform">
+  <pre><code class="language-bash">curl -X GET \
+  -H "Authorization: Bearer $token" \
+  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2_cpu.tgz" \
+  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.2_cpu.tgz?alt=media"</code></pre>
+</div>
 
-* #### Instale o python3.11 (Ubuntu)
-```bash
-sudo apt install python3.11
-```
-* #### Instale o pkplus-cli (Ubuntu)
-```bash
-wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
+<hr />
+
+<h4>Instalação de pacotes necessários e carregamento da imagem</h4>
+
+<!-- Abas para Ubuntu/CentOS -->
+<div class="tab">
+  <button class="tablinks-system" onclick="openTabSystem(event, 'Ubuntu')" id="defaultSystem">Ubuntu</button>
+  <button class="tablinks-system" onclick="openTabSystem(event, 'CentOS')">CentOS 7</button>
+</div>
+
+<!-- Conteúdo Ubuntu -->
+<div id="Ubuntu" class="tabcontent-system">
+  <h4>Instale o python3.11</h4>
+  <pre><code class="language-bash">sudo apt install python3.11</code></pre>
+  <h4>Instale o pkplus-cli</h4>
+  <pre><code class="language-bash">wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
 --no-check-certificate --http-user='seu_usuario' --ask-password
 apt install ./pkplus-cli_3.0.0-1_all.deb
-mkdir -p /var/lib/pkplus-svc
-```
-* Carregue a imagem com o pkplus-cli (disponível para Ubuntu, e CentOS7 **sem** **GPU**)
-```bash
-pkplus-cli svc import-file ParkingPlus:WPSLPR-x.y.z.tgz
-```
-* Nas versões com **CentOS7 com GPU** importe o tgz.
-> 👍 P.S caso seja a versão CPU, o pkplus-cli é capaz de rodá-la também
-```bash
-tar -xf ParkingPlus:WPSLPR-x.y.z.tgz
-docker load -i images.tar
-```
-* Após a importação inicie a imagem com pkplus-cli
-```bash
-pkplus-cli svc enable ParkingPlus:WPSLPR:x.y.z
-```
-* No CentOS
-```bash
-docker-compose up -d
-```
+mkdir -p /var/lib/pkplus-svc</code></pre>
+  <h4>Carregue a imagem com o pkplus-cli</h4>
+  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus:WPSLPR-2.9.2.tgz</code></pre>
+  <h5>Após a importação inicie a imagem com o pkplus-cli</h5>
+  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPSLPR:2.9.2</code></pre>
+</div>
+
+<!-- Conteúdo CentOS -->
+<div id="CentOS" class="tabcontent-system">
+  <h4>Nas versões com <strong>GPU</strong> importe o tgz.</h4>
+  <h5>👍 P.S caso seja a versão CPU, o pkplus-cli é capaz de rodá-la também</h5>
+  <h4>GPU</h4>
+  <pre><code class="language-bash">mkdir "/instalacoes/ParkingPlus-WPSLPR-2.9.2"
+mv /instalacoes/ParkingPlus-WPSLPR-2.9.2_gpu.tgz /instalacoes/ParkingPlus-WPSLPR-2.9.2
+cd /instalacoes/ParkingPlus-WPSLPR-2.9.2
+tar -xf ParkingPlus:WPSLPR-2.9.2_gpu.tgz
+docker load -i images.tar</code></pre>
+  <h4>Inicie a imagem com o docker-compose</h4>
+  <pre><code class="language-bash">docker compose up -d</code></pre>
+  <h4>CPU</h4>
+  <pre><code class="language-bash">wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
+--no-check-certificate --http-user='seu_usuario' --ask-password
+apt install ./pkplus-cli_3.0.0-1_all.deb
+mkdir -p /var/lib/pkplus-svc</code></pre>
+  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus:WPSLPR-2.9.2.tgz</code></pre>
+  <h5>Após a importação inicie a imagem com pkplus-cli</h5>
+  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPSLPR:2.9.2</code></pre>
+</div>
+
+<!-- Scripts separados para abas -->
+<script>
+function openTabPlatform(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-platform");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-platform");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openTabSystem(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-system");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-system");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("defaultPlatform").click();
+  document.getElementById("defaultSystem").click();
+});
+</script>
+
+
+
 > ⚠️ **Atenção!**
 > 
 > Caso após executar o container receba um erro de:

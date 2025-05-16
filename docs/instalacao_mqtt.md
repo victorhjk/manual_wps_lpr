@@ -78,12 +78,12 @@ curl -X GET \
 
 ```bash
 docker network rm parkingplus_mqtt
-docker network create   --driver bridge   --subnet=172.40.10.0/24   --gateway=172.40.10.1   parkingplus_mqtt
+docker network create --driver bridge --subnet=172.40.10.0/24 --gateway=172.40.10.1 parkingplus_mqtt
 ```
 
 * #### Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)
 ```bash
-pkplus-cli svc import-file ParkingPlus-MQTT-1.0.2.tgz
+pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.0.2.tgz
 ```
 
 * #### Após a importação inicie a imagem do MQTT com pkplus-cli

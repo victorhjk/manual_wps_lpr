@@ -749,14 +749,14 @@ versão anterior do <em>ParkingPlus:WPS_LPR:2.7.0</em>, o ParkingPlus-MQTT preci
 <p>Pare os Containers do MQTT e WPS_LPR primeiro</p>
 </blockquote>
 <pre><code class="language-bash">docker network rm parkingplus_mqtt
-docker network create   --driver bridge   --subnet=172.40.10.0/24   --gateway=172.40.10.1   parkingplus_mqtt
+docker network create --driver bridge --subnet=172.40.10.0/24 --gateway=172.40.10.1 parkingplus_mqtt
 </code></pre>
 <ul>
 <li>
 <h4 id="carregue-a-imagem-com-o-pkplus-cli-disponivel-para-ubuntu-e-centos7">Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)</h4>
 </li>
 </ul>
-<pre><code class="language-bash">pkplus-cli svc import-file ParkingPlus-MQTT-1.0.2.tgz
+<pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.0.2.tgz
 </code></pre>
 <ul>
 <li>
