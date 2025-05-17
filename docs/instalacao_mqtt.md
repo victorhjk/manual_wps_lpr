@@ -143,8 +143,6 @@ pkplus-cli svc enable ParkingPlus:MQTT:1.0.2
         O procedimento de instalação está descrito no 
 <a href="https://intranet.parkingplus.com.br/pub/Parking%20Plus/CentOS_7/Instalacao_pkplus-cli/01-Instalacao.mp4" 
 target="_blank">manual próprio do sistema operacional</a>, porém, caso já esteja instalado, basta importar o arquivo.
-<p>É importante que essa imagem seja importada pelo pkplus-cli, pois ele gerencia as redes do Docker, sem a necessidade de
-fazer isso manualmente.</p>
     </div>
 </div>
 

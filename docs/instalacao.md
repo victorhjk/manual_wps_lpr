@@ -240,7 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
 > 
 > Caso após executar o container receba um erro de:
 > **_`unknown or invalid runtime name: nvidia`_**, consulte a seção 
-> [configuração do daemon do docker](configuracao_sistema_operacional.md#51-execute-o-seguinte-comando-para-configurar-o-daemon-do-docker).
+> [configuração do daemon do docker](configuracao_sistema_operacional.md#configuracao-docker)
+
 
 Ao iniciar o container, o sistema já estará em funcionamento, lendo o arquivo `config.json`, para 
 executar as câmeras cadastradas, para adicionar, alterar ou remover câmeras, siga para a próxima seção.
