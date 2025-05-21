@@ -139,7 +139,7 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 <div id="GPU" class="tabcontent-platform">
   <pre><code class="language-bash">curl -X GET \
   -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2_gpu.tgz" \
+  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2.tgz" \
   "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.2_gpu.tgz?alt=media"</code></pre>
 </div>
 
@@ -147,7 +147,7 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 <div id="CPU" class="tabcontent-platform">
   <pre><code class="language-bash">curl -X GET \
   -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2_cpu.tgz" \
+  -o "/instalacoes/ParkingPlus-WPSLPR-2.9.2.tgz" \
   "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-WPSLPR-2.9.2_cpu.tgz?alt=media"</code></pre>
 </div>
 
@@ -171,9 +171,9 @@ curl -X GET \ -H "Authorization: Bearer <access_token>" \
 apt install ./pkplus-cli_3.0.0-1_all.deb
 mkdir -p /var/lib/pkplus-svc</code></pre>
   <h4>Carregue a imagem com o pkplus-cli</h4>
-  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus:WPSLPR-2.9.2.tgz</code></pre>
+  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus-WPSLPR-2.9.2.tgz</code></pre>
   <h5>Após a importação inicie a imagem com o pkplus-cli</h5>
-  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPSLPR:2.9.2</code></pre>
+  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPS_LPR:2.9.2</code></pre>
 </div>
 
 <!-- Conteúdo CentOS -->
@@ -193,9 +193,9 @@ docker load -i images.tar</code></pre>
 --no-check-certificate --http-user='seu_usuario' --ask-password
 apt install ./pkplus-cli_3.0.0-1_all.deb
 mkdir -p /var/lib/pkplus-svc</code></pre>
-  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus:WPSLPR-2.9.2.tgz</code></pre>
+  <pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus-WPSLPR-2.9.2.tgz</code></pre>
   <h5>Após a importação inicie a imagem com pkplus-cli</h5>
-  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPSLPR:2.9.2</code></pre>
+  <pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:WPS_LPR:2.9.2</code></pre>
 </div>
 
 <!-- Scripts separados para abas -->

@@ -158,4 +158,3 @@ Servidor → Retorna Resultado (JSON)
 
 #### **9. Conclusão**
 Este manual oferece um guia prático e claro para envio de imagens ao endpoint, visando obter a placa, tipo de veículo e coordenadas. Ao seguir este formato, o cliente pode enviar imagens como binário ou codificadas em base64, garantindo a flexibilidade de integração com diferentes plataformas.
-
