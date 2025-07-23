@@ -256,6 +256,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#320-2025-07-20" class="md-nav__link">
+    3.2.0 - 2025-07-20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-2025-07-17" class="md-nav__link">
+    3.1.0 - 2025-07-17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300-2025-06-11" class="md-nav__link">
+    3.0.0 - 2025-06-11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#292-2025-05-16" class="md-nav__link">
     2.9.2 - 2025-05-16
   </a>
@@ -561,6 +582,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#320-2025-07-20" class="md-nav__link">
+    3.2.0 - 2025-07-20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-2025-07-17" class="md-nav__link">
+    3.1.0 - 2025-07-17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#300-2025-06-11" class="md-nav__link">
+    3.0.0 - 2025-06-11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#292-2025-05-16" class="md-nav__link">
     2.9.2 - 2025-05-16
   </a>
@@ -714,6 +756,43 @@
                 
                 
                 <h1 id="releases-wps_lpr">Releases WPS_LPR</h1>
+<h4 id="320-2025-07-20">3.2.0 - 2025-07-20</h4>
+<ul>
+<li>Geração do binário wps-ip-notifier</li>
+</ul>
+<h4 id="310-2025-07-17">3.1.0 - 2025-07-17</h4>
+<ul>
+<li>Implementado sistema de autenticação para API LPR:</li>
+<li>Gerenciamento de usuários</li>
+<li>
+<p>Proteção de métodos de acesso</p>
+</li>
+<li>
+<p>Melhorias:</p>
+</li>
+<li>Novos endpoints REST para verificação de vagas</li>
+<li>Aprimoramento no monitoramento de IPs autorizados (remoção de dependência do .env)</li>
+</ul>
+<p>Correções:</p>
+<ul>
+<li>Validação de placas LPR e tratamento de saídas falsas</li>
+<li>Configuração LED Hikvision (sempre ligado)</li>
+<li>Ajuste no tempo de captura da câmera para segmentação</li>
+<li>Tratamento de ppcs_mappings nulos</li>
+<li>Ajustes no vehicle_count (início/parada)</li>
+</ul>
+<p>Outras alterações:</p>
+<ul>
+<li>Mensagens de log ajustadas</li>
+</ul>
+<h4 id="300-2025-06-11">3.0.0 - 2025-06-11</h4>
+<ul>
+<li>Alteração da maneira como as configurações são carregadas, a partir da versão 3.0.0, o arquivo será carregado da nuvem periodicamente, esse arquivo está codificado em jws, e é necessário a validação do mesmo com as credenciais de carpark da garagem;</li>
+<li>Alterações de logger para melhorar a leitura dos mesmos;</li>
+<li>Adição de novos logs para debug;</li>
+<li>Adição de novo método de carregamento baseado no tipo de serviço, lpr, segmentação ou contador de veículos;</li>
+<li>Melhorias em geral nos códigos, com reorganizações e docstrings atualizadas.</li>
+</ul>
 <h4 id="292-2025-05-16">2.9.2 - 2025-05-16</h4>
 <ul>
 <li>Correção do envio de tipo pessoa como moto. Agora pessoa é enviado 

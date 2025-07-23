@@ -1,5 +1,39 @@
 # Releases WPS_LPR
 
+#### 3.2.0 - 2025-07-20
+
+* Geração do binário wps-ip-notifier
+
+#### 3.1.0 - 2025-07-17
+
+- Implementado sistema de autenticação para API LPR:
+  * Gerenciamento de usuários
+  * Proteção de métodos de acesso
+
+- Melhorias:
+  * Novos endpoints REST para verificação de vagas
+  * Aprimoramento no monitoramento de IPs autorizados (remoção de dependência do .env)
+
+Correções:
+
+- Validação de placas LPR e tratamento de saídas falsas
+- Configuração LED Hikvision (sempre ligado)
+- Ajuste no tempo de captura da câmera para segmentação
+- Tratamento de ppcs_mappings nulos
+- Ajustes no vehicle_count (início/parada)
+
+Outras alterações:
+
+- Mensagens de log ajustadas
+
+#### 3.0.0 - 2025-06-11
+
+* Alteração da maneira como as configurações são carregadas, a partir da versão 3.0.0, o arquivo será carregado da nuvem periodicamente, esse arquivo está codificado em jws, e é necessário a validação do mesmo com as credenciais de carpark da garagem;
+* Alterações de logger para melhorar a leitura dos mesmos;
+* Adição de novos logs para debug;
+* Adição de novo método de carregamento baseado no tipo de serviço, lpr, segmentação ou contador de veículos;
+* Melhorias em geral nos códigos, com reorganizações e docstrings atualizadas.
+
 #### 2.9.2 - 2025-05-16
 
 * Correção do envio de tipo pessoa como moto. Agora pessoa é enviado 

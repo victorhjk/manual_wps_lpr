@@ -408,7 +408,6 @@ yum localinstall wps-ip-notifier-1.0.3-1.el7.x86_64.rpm
      CGroup: /system.slice/wps-ip-notifier.service  
              └─2028 /usr/local/bin/wps_ip_notifier
 </div>
-
 <h4>Instale o pkplus-cli</h4>
  <pre style="font-size: 0.9em"><code class="language-bash">wget -r -np -nH --cut-dirs=5 --accept rpm \
 --http-user='seu-usuario' \
