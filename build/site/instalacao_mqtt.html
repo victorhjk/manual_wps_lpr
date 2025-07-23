@@ -349,46 +349,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gerar-token-para-autenticacao" class="md-nav__link">
-    Gerar token para autenticação:
-  </a>
-  
-    <nav class="md-nav" aria-label="Gerar token para autenticação:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#escolher-a-api" class="md-nav__link">
-    Escolher a API:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-para-download-da-imagem" class="md-nav__link">
-    Parâmetros para download da imagem
-  </a>
-  
-    <nav class="md-nav" aria-label="Parâmetros para download da imagem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-de-uso" class="md-nav__link">
-    Exemplo de Uso
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#instalacao-de-pacotes-necessarios" class="md-nav__link">
     Instalação de pacotes necessários
   </a>
@@ -566,46 +526,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gerar-token-para-autenticacao" class="md-nav__link">
-    Gerar token para autenticação:
-  </a>
-  
-    <nav class="md-nav" aria-label="Gerar token para autenticação:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#escolher-a-api" class="md-nav__link">
-    Escolher a API:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-para-download-da-imagem" class="md-nav__link">
-    Parâmetros para download da imagem
-  </a>
-  
-    <nav class="md-nav" aria-label="Parâmetros para download da imagem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-de-uso" class="md-nav__link">
-    Exemplo de Uso
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#instalacao-de-pacotes-necessarios" class="md-nav__link">
     Instalação de pacotes necessários
   </a>
@@ -688,7 +608,7 @@ devidamente instaladas, para consultar quais são elas e o procedimento de insta
 seção <a href="configuracao_sistema_operacional.html">Configuração Sistema Operacional</a>. Siga estas etapas para importar a imagem 
 do ParkingPLUS-MQTT:</p>
 <p>Versâo Atual: </p>
-<pre><code class="language-bash">&quot;1.0.2&quot;
+<pre><code class="language-bash">&quot;1.1.0&quot;
 </code></pre>
 <h3 id="atencao">⚠️ Atenção</h3>
 <p>Essa imagem não é retrocompatível com outras versões, caso deseje voltar para uma
@@ -697,38 +617,9 @@ versão anterior do <em>ParkingPlus:WPS_LPR:2.7.0</em>, o ParkingPlus-MQTT preci
 <li>Baixe a imagem ParkingPlus:MQTT mais recente disponível no respositório.</li>
 </ul>
 <p>Arquivos:</p>
-<pre><code>- ParkingPlus-MQTT-1.0.2.tgz
+<pre><code>- ParkingPlus-MQTT-1.1.0.tgz
 </code></pre>
-<h3 id="gerar-token-para-autenticacao">Gerar token para autenticação:</h3>
-<p><a href="https://developers.google.com/oauthplayground/?hl=pt-br">OAuth Playground</a></p>
-<h4 id="escolher-a-api">Escolher a API:</h4>
-<p><strong>Cloud Storage API v1</strong></p>
-<ul>
-<li>
-<p><code>https://www.googleapis.com/auth/devstorage.read_only</code></p>
-</li>
-<li>
-<p>Clique em <strong>Authorize API</strong>.</p>
-</li>
-<li>Escolha sua conta da <strong>wps-sa</strong>.</li>
-<li>Clique em <strong>Exchange authorization code for tokens</strong>.</li>
-<li>Copie o <strong>Access Token</strong> e substitua em <code>access_token</code> na chamada do <code>curl</code> abaixo. Ou crie um variavel de ambiente com o conteúdo, token.</li>
-</ul>
-<h3 id="parametros-para-download-da-imagem">Parâmetros para download da imagem</h3>
-<ul>
-<li><strong>BUCKET_NAME</strong>: <code>lpr-wps-v1</code></li>
-<li><strong>OBJECT_NAME</strong>: nome do arquivo (ex.: <code>ParkingPlus-MQTT-1.0.2.tgz</code>)</li>
-<li><strong>SAVE_TO_LOCATION</strong>: local onde deseja salvar o arquivo</li>
-</ul>
-<pre><code class="language-bash">curl -X GET \ -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; \ 
--o &quot;&lt;SAVE_TO_LOCATION&gt;&quot; \ 
-&quot;https://storage.googleapis.com/storage/v1/b/&lt;BUCKET_NAME&gt;/o/&lt;OBJECT_NAME&gt;?alt=media&quot;
-</code></pre>
-<h4 id="exemplo-de-uso">Exemplo de Uso</h4>
-<pre><code class="language-bash">curl -X GET \
-  -H &quot;Authorization: Bearer $token&quot; \
-  -o &quot;/instalacoes/ParkingPlus-MQTT-1.0.2.tgz&quot; \
-  &quot;https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-MQTT-1.0.2.tgz?alt=media&quot;
+<pre><code>https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/MQTT/1.1.0/ParkingPlus-MQTT-1.1.0.tgz
 </code></pre>
 <h3 id="instalacao-de-pacotes-necessarios">Instalação de pacotes necessários</h3>
 <ul>
@@ -756,14 +647,14 @@ docker network create --driver bridge --subnet=172.40.10.0/24 --gateway=172.40.1
 <h4 id="carregue-a-imagem-com-o-pkplus-cli-disponivel-para-ubuntu-e-centos7">Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)</h4>
 </li>
 </ul>
-<pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.0.2.tgz
+<pre><code class="language-bash">pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.1.0.tgz
 </code></pre>
 <ul>
 <li>
 <h4 id="apos-a-importacao-inicie-a-imagem-do-mqtt-com-pkplus-cli">Após a importação inicie a imagem do MQTT com pkplus-cli</h4>
 </li>
 </ul>
-<pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:MQTT:1.0.2
+<pre><code class="language-bash">pkplus-cli svc enable ParkingPlus:MQTT:1.1.0
 </code></pre>
 <!DOCTYPE html>
 <html lang="pt-br">

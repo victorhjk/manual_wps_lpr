@@ -82,7 +82,7 @@
 
 <h2>Pré-Requisitos</h2>
 <ul>
-  <li>Ubuntu Server 22.04 LTS (Recomendado)</li>
+  <li>Ubuntu Server 22.04 LTS (Altamente Recomendado)</li>
   <li>CentOS 7</li>
   <li>Debian 12</li>
 </ul>
@@ -98,7 +98,7 @@
 
   <div id="ubuntu" class="tab-content active">
     <h4>1. Criação de pastas</h4>
-    <pre><code>sudo mkdir -p /instalacoes /WPSBrasil</code></pre>
+    <pre><code>sudo mkdir -p /instalacoes </code></pre>
 
     <h4>2. Atualização do sistema</h4>
     <pre><code>sudo apt-get update && apt upgrade</code></pre>
@@ -161,7 +161,7 @@ systemctl enable set_performance.service</code></pre>
 
   <div id="centos" class="tab-content">
     <h4>1. Criação de pastas</h4>
-    <pre><code>sudo mkdir -p /instalacoes /WPSBrasil</code></pre>
+    <pre><code>sudo mkdir -p /instalacoes </code></pre>
 
     <h4>2. Repositórios</h4>
     <pre><code>yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm -y

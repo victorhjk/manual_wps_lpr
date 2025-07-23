@@ -11,7 +11,7 @@ do ParkingPLUS-MQTT:
 
 Versâo Atual: 
 ```bash
-"1.0.2"
+"1.1.0"
 ```
 ### ⚠️ Atenção
 Essa imagem não é retrocompatível com outras versões, caso deseje voltar para uma
@@ -21,43 +21,70 @@ versão anterior do _ParkingPlus:WPS_LPR:2.7.0_, o ParkingPlus-MQTT precisa ser 
 
 Arquivos:
 ```
-- ParkingPlus-MQTT-1.0.2.tgz
+- ParkingPlus-MQTT-1.1.0.tgz
 ```
 
-
-### Gerar token para autenticação:
-
-[OAuth Playground](https://developers.google.com/oauthplayground/?hl=pt-br)
-
-#### Escolher a API:
-**Cloud Storage API v1**
-
--   `https://www.googleapis.com/auth/devstorage.read_only`
-
-1. Clique em **Authorize API**.
-2. Escolha sua conta da **wps-sa**.
-3. Clique em **Exchange authorization code for tokens**.
-4. Copie o **Access Token** e substitua em `access_token` na chamada do `curl` abaixo. Ou crie um variavel de ambiente com o conteúdo, token.
-
-### Parâmetros para download da imagem
-- **BUCKET_NAME**: `lpr-wps-v1`
-- **OBJECT_NAME**: nome do arquivo (ex.: `ParkingPlus-MQTT-1.0.2.tgz`)
-- **SAVE_TO_LOCATION**: local onde deseja salvar o arquivo
-
-
-```bash
-curl -X GET \ -H "Authorization: Bearer <access_token>" \ 
--o "<SAVE_TO_LOCATION>" \ 
-"https://storage.googleapis.com/storage/v1/b/<BUCKET_NAME>/o/<OBJECT_NAME>?alt=media"
+```
+https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/MQTT/1.1.0/ParkingPlus-MQTT-1.1.0.tgz
 ```
 
-#### Exemplo de Uso
-```bash
-curl -X GET \
-  -H "Authorization: Bearer $token" \
-  -o "/instalacoes/ParkingPlus-MQTT-1.0.2.tgz" \
-  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-MQTT-1.0.2.tgz?alt=media"
-```
+[//]: # (### Gerar token para autenticação:)
+
+[//]: # ()
+[//]: # ([OAuth Playground]&#40;https://developers.google.com/oauthplayground/?hl=pt-br&#41;)
+
+[//]: # ()
+[//]: # (#### Escolher a API:)
+
+[//]: # (**Cloud Storage API v1**)
+
+[//]: # ()
+[//]: # (-   `https://www.googleapis.com/auth/devstorage.read_only`)
+
+[//]: # ()
+[//]: # (1. Clique em **Authorize API**.)
+
+[//]: # (2. Escolha sua conta da **wps-sa**.)
+
+[//]: # (3. Clique em **Exchange authorization code for tokens**.)
+
+[//]: # (4. Copie o **Access Token** e substitua em `access_token` na chamada do `curl` abaixo. Ou crie um variavel de ambiente com o conteúdo, token.)
+
+[//]: # ()
+[//]: # (### Parâmetros para download da imagem)
+
+[//]: # (- **BUCKET_NAME**: `lpr-wps-v1`)
+
+[//]: # (- **OBJECT_NAME**: nome do arquivo &#40;ex.: `ParkingPlus-MQTT-1.1.0.tgz`&#41;)
+
+[//]: # (- **SAVE_TO_LOCATION**: local onde deseja salvar o arquivo)
+
+[//]: # ()
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (curl -X GET \ -H "Authorization: Bearer <access_token>" \ )
+
+[//]: # (-o "<SAVE_TO_LOCATION>" \ )
+
+[//]: # ("https://storage.googleapis.com/storage/v1/b/<BUCKET_NAME>/o/<OBJECT_NAME>?alt=media")
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (#### Exemplo de Uso)
+
+[//]: # (```bash)
+
+[//]: # (curl -X GET \)
+
+[//]: # (  -H "Authorization: Bearer $token" \)
+
+[//]: # (  -o "/instalacoes/ParkingPlus-MQTT-1.1.0.tgz" \)
+
+[//]: # (  "https://storage.googleapis.com/storage/v1/b/lpr-wps-v1/o/ParkingPlus-MQTT-1.1.0.tgz?alt=media")
+
+[//]: # (```)
 
 ### Instalação de pacotes necessários
 
@@ -83,12 +110,12 @@ docker network create --driver bridge --subnet=172.40.10.0/24 --gateway=172.40.1
 
 * #### Carregue a imagem com o pkplus-cli (disponível para Ubuntu e CentOS7)
 ```bash
-pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.0.2.tgz
+pkplus-cli svc import-file /instalacoes/ParkingPlus-MQTT-1.1.0.tgz
 ```
 
 * #### Após a importação inicie a imagem do MQTT com pkplus-cli
 ```bash
-pkplus-cli svc enable ParkingPlus:MQTT:1.0.2
+pkplus-cli svc enable ParkingPlus:MQTT:1.1.0
 ```
 
 <!DOCTYPE html>
