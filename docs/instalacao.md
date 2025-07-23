@@ -255,7 +255,7 @@ apt install openvpn</code></pre>
 
 ### Instalação do LPR-Stream-Provider
 <p><strong></strong> Baixe o pacote da versão mais atual:</p>
-<pre style="font-size: 0.7em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/lpr-stream-provider/3.0.15/lpr-stream-provider-3.0.15.tgz</code></pre>
+<pre style="font-size: 0.8em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/lpr-stream-provider/3.0.15/lpr-stream-provider-3.0.15.tgz</code></pre>
 
 <p><strong></strong> Importe o serviço usando o <code>pkplus-cli</code>:</p>
 <pre><code class="language-bash">pkplus-cli svc import-file lpr-stream-provider-3.0.15.tgz</code></pre>
@@ -323,12 +323,12 @@ apt install openvpn</code></pre>
 
 <!-- Conteúdo GPU -->
 <div id="GPU" class="tabcontent-platform">
-  <pre style="font-size: 0.75em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/WpsLpr/3.2.0/ParkingPlus-WPSLPR-3.2.0_gpu.tgz</code></pre>
+  <pre style="font-size: 0.85em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/WpsLpr/3.2.0/ParkingPlus-WPSLPR-3.2.0_gpu.tgz</code></pre>
 </div>
 
 <!-- Conteúdo CPU -->
 <div id="CPU" class="tabcontent-platform">
-  <pre style="font-size: 0.75em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/WpsLpr/3.2.0/ParkingPlus-WPSLPR-3.2.0_cpu.tgz</code></pre>
+  <pre style="font-size: 0.85em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/WpsLpr/3.2.0/ParkingPlus-WPSLPR-3.2.0_cpu.tgz</code></pre>
 </div>
 
 <hr />
@@ -344,22 +344,11 @@ apt install openvpn</code></pre>
 <!-- Conteúdo Ubuntu -->
 <div id="Ubuntu2" class="tabcontent-system-B">
     <h4>Instale o wps-ip-notifier</h4>
-    <pre style="font-size: 0.8em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/services/1.0.3/wps-ip-notifier-1.0.3-1.deb
+    <pre style="font-size: 0.9em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/services/1.0.3/wps-ip-notifier-1.0.3-1.deb
 apt install ./wps-ip-notifier-1.0.3-1.deb
 </code></pre>
 <h4>Confira a instalação</h4>
-<pre class="bash-output"><code class="language-bash">systemctl status wps-ip-notifier.service
-<span class="service">●</span> wps-ip-notifier.service - WPS IP Notifier Service
-     Loaded: loaded (/etc/systemd/system/wps-ip-notifier.service; <span class="enabled">enabled</span>; vendor preset: <span class="enabled">enabled</span>)
-     Active: <span class="active">active (running)</span> since Tue 2025-07-22 09:43:12 -03; 22h ago
-   Main PID: 2028 (wps_ip_notifier)
-      Tasks: 3 (limit: 38016)
-     Memory: 316.0K
-        CPU: 58.979s
-     CGroup: /system.slice/wps-ip-notifier.service
-             └─2028 /usr/local/bin/wps_ip_notifier
-</code></pre>
-
+<pre style="font-size: 1em"><code class="language-bash">systemctl status wps-ip-notifier.service</code></pre>
 <div class="md-typeset">
   <div class="admonition warning">
     <p class="admonition-title">Verificação do serviço</p>
@@ -368,12 +357,23 @@ apt install ./wps-ip-notifier-1.0.3-1.deb
     <pre><code class="language-bash">journalctl -u wps-ip-notifier -f</code></pre>
   </div>
 </div>
+<div class="bash-output" style="user-select: text; font-size: 0.7em;"><span class="service">●</span> wps-ip-notifier.service - WPS IP Notifier Service  
+     Loaded: loaded (/etc/systemd/system/wps-ip-notifier.service; <span class="enabled">enabled</span>; vendor preset: <span class="enabled">enabled</span>)  
+     Active: <span class="active">active (running)</span> since Tue 2025-07-22 09:43:12 -03; 22h ago  
+   Main PID: 2028 (wps_ip_notifier)  
+      Tasks: 3 (limit: 38016)  
+     Memory: 316.0K  
+        CPU: 58.979s  
+     CGroup: /system.slice/wps-ip-notifier.service  
+             └─2028 /usr/local/bin/wps_ip_notifier
+</div>
 
   <h4>Instale o python3.11</h4>
   <pre><code class="language-bash">sudo apt install python3.11</code></pre>
   <h4>Instale o pkplus-cli</h4>
-   <pre style="font-size: 0.8em"><code class="language-bash">wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
---no-check-certificate --http-user='seu_usuario' --ask-password
+   <pre style="font-size: 0.85em"><code class="language-bash">wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
+--http-user='seu_usuario' \
+--ask-password
 apt install ./pkplus-cli_3.0.0-1_all.deb
 mkdir -p /var/lib/pkplus-svc</code></pre>
   <h4>Carregue a imagem com o pkplus-cli</h4>
@@ -385,22 +385,11 @@ mkdir -p /var/lib/pkplus-svc</code></pre>
 <!-- Conteúdo CentOS -->
 <div id="CentOS2" class="tabcontent-system-B">
 <h4>Instale o wps-ip-notifier</h4>
-   <pre style="font-size: 0.8em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/services/1.0.3/wps-ip-notifier-1.0.3-1.el7.x86_64.rpm
+   <pre style="font-size: 0.9em"><code class="language-bash">https://intranet.parkingplus.com.br/pub/Parking%20Plus/LPR/services/1.0.3/wps-ip-notifier-1.0.3-1.el7.x86_64.rpm
 yum localinstall wps-ip-notifier-1.0.3-1.el7.x86_64.rpm
 </code></pre>
 <h4>Confira a instalação</h4>
-<pre class="bash-output"><code class="language-bash">systemctl status wps-ip-notifier.service
-<span class="service">●</span> wps-ip-notifier.service - WPS IP Notifier Service
-     Loaded: loaded (/etc/systemd/system/wps-ip-notifier.service; <span class="enabled">enabled</span>; vendor preset: <span class="enabled">enabled</span>)
-     Active: <span class="active">active (running)</span> since Tue 2025-07-22 09:43:12 -03; 22h ago
-   Main PID: 2028 (wps_ip_notifier)
-      Tasks: 3 (limit: 38016)
-     Memory: 316.0K
-        CPU: 58.979s
-     CGroup: /system.slice/wps-ip-notifier.service
-             └─2028 /usr/local/bin/wps_ip_notifier
-</code></pre>
-
+<pre style="font-size: 1em"><code class="language-bash">systemctl status wps-ip-notifier.service</code></pre>
 <div class="md-typeset">
   <div class="admonition warning">
     <p class="admonition-title">Verificação do serviço</p>
@@ -409,10 +398,24 @@ yum localinstall wps-ip-notifier-1.0.3-1.el7.x86_64.rpm
     <pre><code class="language-bash">journalctl -u wps-ip-notifier -f</code></pre>
   </div>
 </div>
+<div class="bash-output" style="user-select: text; font-size: 0.7em;"><span class="service">●</span> wps-ip-notifier.service - WPS IP Notifier Service  
+     Loaded: loaded (/etc/systemd/system/wps-ip-notifier.service; <span class="enabled">enabled</span>; vendor preset: <span class="enabled">enabled</span>)  
+     Active: <span class="active">active (running)</span> since Tue 2025-07-22 09:43:12 -03; 22h ago  
+   Main PID: 2028 (wps_ip_notifier)  
+      Tasks: 3 (limit: 38016)  
+     Memory: 316.0K  
+        CPU: 58.979s  
+     CGroup: /system.slice/wps-ip-notifier.service  
+             └─2028 /usr/local/bin/wps_ip_notifier
+</div>
+
 <h4>Instale o pkplus-cli</h4>
- <pre style="font-size: 0.85em"><code class="language-bash">wget https://intranet.parkingplus.com.br/pub/Parking%20Plus/pkplus-cli/3.0.0/pkplus-cli_3.0.0-1_all.deb \
---no-check-certificate --http-user='seu_usuario' --ask-password
-apt install ./pkplus-cli_3.0.0-1_all.deb
+ <pre style="font-size: 0.9em"><code class="language-bash">wget -r -np -nH --cut-dirs=5 --accept rpm \
+--http-user='seu-usuario' \
+--ask-password \
+-P /instalacoes/pkplus-cli \
+"https://intranet.parkingplus.com.br/pub/Parking%20Plus/ParkingPlus%20InstallServer/stable/1.6.4/"
+yum localinstall /instalacoes/pkplus-cli/*.rpm
 mkdir -p /var/lib/pkplus-svc</code></pre>
   <h4>Nas versões com <strong>GPU</strong> importe o tgz.</h4>
   <h5>👍 P.S caso seja a versão CPU, o pkplus-cli é capaz de rodá-la também</h5>
