@@ -355,13 +355,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuracao-das-cameras" class="md-nav__link">
-    Configuração das câmeras
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#funcionamento-do-sistema-wps_lpr" class="md-nav__link">
     Funcionamento do sistema WPS_LPR
   </a>
@@ -513,13 +506,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuracao-das-cameras" class="md-nav__link">
-    Configuração das câmeras
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#funcionamento-do-sistema-wps_lpr" class="md-nav__link">
     Funcionamento do sistema WPS_LPR
   </a>
@@ -617,165 +603,20 @@
                 
                 <h1 id="execucao">Execução</h1>
 <p style="text-align: justify;">
-    Siga essas etapas para executar o sistema de reconhecimento de placas de veículos WPS_LPR:
+    A execação das versões acima da 3.0.0, se dão exclusivamente pelas câmeras cadastradas no LPR Admin, depois de 
+executar o pkplus-svc enable, é necessário acompanhar nos Logs se a execução foi autorizada, com base nas chaves que
+o WPS_LPR recebeu e no IP da VPN.
 </p>
 
-<h3 id="configuracao-das-cameras">Configuração das câmeras</h3>
-<p style="text-align: justify;">
-    <strong>1.</strong> Configure a conexão da(s) câmera(s) no arquivo:
-</p>
-<pre style="text-align: justify; font-family: 'Courier New', monospace;">
-<code>/var/lib/ParkingPlus/WpsLpr/config/config.json</code>
-</pre>
-<p style="text-align: justify;">
-    <strong>1.1</strong> Aqui está um exemplo de como o arquivo <code>config.json</code> deve ser configurado para o 
-funcionamento do sistema <em>WPS_LPR</em>, podem ser adicionadas várias câmeras para o processamento dentro do limite de
-processamento da máquina.
-</p>
-
-<pre><code class="language-json">[
-  {
-    &quot;camera_id&quot;: &quot;1&quot;,
-    &quot;camera_type&quot;: &quot;lpr&quot;,
-    &quot;camera_brand&quot;: &quot;intelbras&quot;,
-    &quot;wps_topic&quot;: &quot;WPS_LPR&quot;,
-    &quot;camera_ip&quot;: &quot;192.168.1.108&quot;,
-    &quot;user&quot;: &quot;wps&quot;,
-    &quot;password&quot;: &quot;wpsbrasil2021&quot;,
-    &quot;channel_dvr&quot;: &quot;1&quot;,
-    &quot;frame_ocr_rate&quot;: 10,
-    &quot;roi_size_x&quot;: 1280,
-    &quot;roi_size_y&quot;: 720,
-    &quot;roi_x&quot;: 0,
-    &quot;roi_y&quot;: 0,
-    &quot;limiar&quot;: 20,
-    &quot;plate_size_min&quot;: 0,
-    &quot;plate_size_max&quot;: 0,
-    &quot;image_size&quot;: 0,
-    &quot;ocr_mode&quot;: 0,
-    &quot;ocr_time&quot;: 1, 
-    &quot;sector_id&quot;: 1,
-    &quot;parking_name&quot;: &quot;&quot;,
-    &quot;protocol&quot;: &quot;udp&quot;,
-    &quot;power_led&quot;: 40,
-    &quot;publish_interval&quot;: 1000,
-    &quot;parking_spaces_quantity&quot;: 1,
-    &quot;park_ids&quot;: []
-  }
-]
-</code></pre>
-<blockquote style="text-align: justify;">
-    Remova quaisquer comentários caso use esse exemplo.
-    <ul>
-        <li><strong>camera_id</strong> é um número sequencial que identifica a câmera no arquivo e seus demais atributos;</li>
-        <li><strong>camera_ip</strong> é o ip da câmera que será conectada;</li>
-        <li><strong>wps_topic</strong> tópico do MQTT que as mensagens serão publicadas;</li>
-        <li><strong>user</strong> usuário da câmera;</li>
-        <li><strong>password</strong> senha da câmera;</li>
-        <li><strong>channel_dvr</strong> canal para conexão com a câmera, geralmente é "1", quando for utilizar conexão via
-        DVR ou NVR verificar o número do canal para se conectar;</li>
-        <li><strong>camera_brand</strong> é a marca da câmera, os modelos homologados são:
-            <ul>
-                <li><em>"intelbras"</em>;</li>
-                <li><em>"hikvision"</em>;</li>
-                <li><em>"positivo"</em>;</li>
-                <li><em>"pumatronix"</em>.</li>
-            </ul>
-        </li>
-        <li><strong>frame_ocr_rate</strong> é a taxa de fps que será passada para a câmera, o WPS_LPR por default faz o OCR
-        em uma imagem por segundo de cada câmera, porém ele não está mais vinculado a essa chave. <strong>PS</strong>: Para câmeras
-        Hikvision e Intelbrás mais atuais, utilize 25 ou 30;</li>
-        <li><strong>roi_size</strong> é o tamanho da imagem que será passada para o WPS_LPR fazer o OCR na imagem, o padrão
-        é 1280 para a largura e 720 para a altura;</li>
-        <li><strong>roi</strong> são os pontos iniciais para desenho de um retângulo na imagem, para limitar a área de
-        atuação do OCR na imagem. Um objetivo por exemplo é que não seja feito OCR em pistas vizinhas;</li>
-        <li><strong>ocr_mode</strong> é o tipo possível de OCR nos tipos de veículos, que são:
-            <ul>
-                <li><em>"0"</em> somente carro;</li>
-                <li><em>"1"</em> somente moto;</li>
-                <li><em>"2"</em> carro e moto.</li>
-            </ul>
-        </li>
-        <li><strong>camera_type</strong> é o tipo de utilização que a câmera terá no sistema WPS_LPR, que poderá ser:
-            <ul>
-                <li><em>"lpr"</em>: Para reconhecimento das placas de veículos;</li>
-                <li><em>"context"</em>: Para capturar fotos de câmeras de contexto, câmeras que serão posicionadas com o
-                intuito de registrar diversas faces dos veículos e do usuário do estacionamento;</li>
-                <li><em>"segmentation"</em>: Para utilização de reconhecimento de placas em vagas específicas do
-                estacionamento, bem como identificar se a vaga está livre ou ocupada. Cada câmera poderá monitorar de 1 a 4 vagas.</li>
-            </ul>
-        </li>
-        <li><strong>limiar</strong> é a quantidade de movimento para ativar o LPR, ou seja submeter o frame à biblioteca de
-        reconhecimento, caso a quantidade de movimento seja menor que o limiar, o frame será descartado,
-        até que a quantidade seja alcançada. Caso a quantidade seja superior ao limiar, e nos frames
-        seguintes seja menor, o sistema verificará no último frame submetido, se houve placa detectada,
-        caso sim, ele envia mais um frame, até que nenhuma placa seja detectada e não haja quantidade de
-        movimento superior ao limiar.</li>
-        <li><strong>image_size</strong> é o tamanho das imagens que serão enviadas na mensagem, os valores são:
-            <ul>
-                <li><em>"0"</em> 1280 x 720;</li>
-                <li><em>"1"</em> 800 x 450;</li>
-                <li><em>"2"</em> 640 x 360;</li>
-                <li><em>"9"</em> Sem imagem.</li>
-            </ul>
-        </li>
-        <li><strong>plate_size_min</strong> é o tamanho mínimo da placa para ser submetido ao OCR (0 é desligado).</li>
-        <li><strong>plate_size_max</strong> é o tamanho máximo da placa para ser submetido ao OCR (0 é desligado). Esse valor deve ser 
-        obrigatoriamente maior que o "plate_size_min".</li>
-        <strong><em></em></strong>
-        <li><strong>ocr_time</strong> é a quantidade de imagens por segundo que serão submetidas ao OCR no modo "<em>lpr</em>", este valor varia
-        de 1 a 4 imagens por segundo, o padrão é 1 por segundo, só aumente esse número caso tenha reserva de recursos de 
-        processamento no Servidor de LPR. Já no modo "<em>Segmentation</em>" é o tempo em que uma imagem será submetida ao OCR,
-        esse tempo é entre 10 e 40 segundos, o padrão é 15 segundos.</li>
-        <li><strong>sector_id</strong> é o ID do setor onde a câmera "<em>segmentation</em>" está instalada, isso reflete na tarifação do setor.</li>
-        <li><strong>parking_name</strong> é o nome do setor, é opcional.</li>
-        <strong><em></em></strong>
-        <li><strong>protocol</strong> é o tipo de protocolo que será usado para fazer o streaming das câmeras, o padrão é UDP, só use o
-        protocolo TCP para fazer debug no sistema.</li>
-        <strong><em></em></strong>
-        <li><strong>power_led</strong> é a potência do LED para câmeras Pumatronix, que contam com a luz branca, o padrão é 40, é importante
-        verificar o funcionamento para evitar que a imagem da placa "estoure".</li>
-        <strong><em></em></strong>
-        <li><strong>publish_interval</strong> é o tempo que a "melhor" placa será publicada no MQTT, como agora a quantidade de OCR por
-        segundo pode ser alterada, é importante não "inundar" o terminal com várias publicações de placas, sendo assim, mesmo
-        que a quantidade de OCR seja 4, ele irá publicar apenas 1 por segundo caso o tempo aqui seja 1000, e também com o
-        intuito de melhorar a performance dos terminais com Mini PCs defasados, pode-se aumentar esse tempo, sem correr o 
-        risco de perder imagens para OCR como no método antigo, antes era possível fazer 1 OCR a cada 2 segundos, agora é
-        possível fazer 2 OCRs em 2 segundos, e enviar apenas 1 placa a cada 2 segundos. Por padrão o tempo é 1000, e ele varia
-        entre 800 e 2000.</li>
-        <strong><em></em></strong>
-        <li><strong>parking_spaces_quantity</strong> é a quantidade de vagas que serão monitoradas no método "<em>segmentation</em>", entre 1 e 4 vagas.</li>
-        <li><strong>park_ids</strong> são os ids das vagas que serão monitoradas no método "<em>segmentation</em>", entre 1 e 4 vagas.</li>
-    </ul>
-</blockquote>
-
-<p style="text-align: justify;">
-<strong>1.2</strong> Para adicionar outras câmeras basta seguir o layout, e repetir os parâmetros com seus devidos
-valores.
-</p>
-<p style="text-align: justify;">
-<strong>1.3</strong> Caso seja uma migração e exista um arquivo supervisord.conf com as configurações das câmeras,
-pode-se utilizar um conversor de supervisor para json, execute os passos abaixo para usá-lo.
-</p>
-
-<pre><code class="language-bash">gdown 1UVEM4WeaugcTujOQ7G2MPVBP3RPlPsp_
-chmod +x converter_sup_to_docker
-./converter_sup_to_docker
-</code></pre>
-<blockquote>
-<p>Isso irá gerar um <code>config.json</code> na pasta /instalacoes, que poderá ser copiado para o docker 
-fazer a leitura das câmeras.  </p>
-</blockquote>
 <h3 id="funcionamento-do-sistema-wps_lpr">Funcionamento do sistema WPS_LPR</h3>
 <p style="text-align: justify;">
-<strong>2.</strong> O sistema assim que o container for iniciado já estará funcionando com as câmeras cadastradas no 
-arquivo <code>/var/lib/ParkingPlus/WpsLpr/config/config.json</code>, qualquer alteração no arquivo o sistema
-processará as alterações, e fará a devida ação, que poderá ser adicionar uma nova câmera, remover 
-uma câmera, alterar algum parâmetro de alguma câmera:
+<strong>1.</strong> O sistema assim que o container for liberado para execução já estará funcionando com as câmeras 
+cadastradas no LPR Admin, qualquer alteração no arquivo o sistema processará as alterações, e fará a devida ação, 
+que poderá ser adicionar uma nova câmera, remover uma câmera, alterar algum parâmetro de alguma câmera:
 </p>
 
 <h3 id="consultando-logs-do-sistema">Consultando Logs do Sistema</h3>
-<p><strong>3.</strong> As informações do sistema WPS_LPR, poderão ser consultadas pelo log <em>journal</em>, pelo comando:</p>
+<p><strong>2.</strong> As informações do sistema WPS_LPR, poderão ser consultadas pelo log <em>journal</em>, pelo comando:</p>
 <pre><code class="language-bash">journalctl CONTAINER_TAG=ParkingPlus:WPS_LPR
 </code></pre>
 <blockquote>
@@ -835,7 +676,7 @@ uma câmera, alterar algum parâmetro de alguma câmera:
 </html>
 
 <h4 id="alterando-nivel-de-log">Alterando nível de log</h4>
-<p><strong>4.</strong> Para alterar o nível de log, altere o arquivo:</p>
+<p><strong>3.</strong> Para alterar o nível de log, altere o arquivo:</p>
 <pre><code class="language-bash">/var/lib/ParkingPlus/WpsLpr/config/settings.xml
 </code></pre>
 <p style="text-align: justify;">
@@ -856,11 +697,11 @@ exibir o LOG nesse nível sem a necessidade de reiniciar a aplicação.
 </p>
 
 <h3 id="verificando-cameras-online-no-sistema">Verificando câmeras online no sistema</h3>
-<p><strong>5.</strong> Para verificar quantas e quais câmeras são, é necessário fazer uma requisição GET HTTP,
+<p><strong>4.</strong> Para verificar quantas e quais câmeras são, é necessário fazer uma requisição GET HTTP,
 no seguinte endpoint:</p>
 <pre><code class="language-bash">http://ip_do_servidor_lpr:5000/api/v0/running_cameras
 </code></pre>
-<p><strong>5.1</strong> O retorno da requisição será algo do tipo:</p>
+<p><strong>4.1</strong> O retorno da requisição será algo do tipo:</p>
 <details>
 <summary>Clique para expandir</summary>
 <pre>
@@ -894,10 +735,10 @@ no seguinte endpoint:</p>
 </details>
 
 <h3 id="solicitando-um-snapshot-de-uma-camera">Solicitando um snapshot de uma câmera</h3>
-<p><strong>6.</strong> Para solicitar um snapshot, é necessário fazer uma requisição GET HTTP, no seguinte endpoint:</p>
+<p><strong>5.</strong> Para solicitar um snapshot, é necessário fazer uma requisição GET HTTP, no seguinte endpoint:</p>
 <pre><code>http://ip_do_servidor_lpr:5000/api/v0/snapshot
 </code></pre>
-<p><strong>6.1</strong> É necessário passar também o argumento <code>wps_topic</code>, exemplo:</p>
+<p><strong>5.1</strong> É necessário passar também o argumento <code>wps_topic</code>, exemplo:</p>
 <pre><code>http://127.0.0.1:5000/api/v0/snapshot?wps_topic=TESTE
 </code></pre>
 <p>O sistema retornará imediatamente a última imagem salva em buffer referente ao <code>wps_topic</code> fornecido.</p>
@@ -915,12 +756,12 @@ no seguinte endpoint:</p>
 <p>As imagens estão codificadas em base64, com resolução 1280x720 e formato JPG.</p>
 </blockquote>
 <h3 id="verificando-quantidade-de-threads">Verificando quantidade de Threads</h3>
-<p><strong>7.</strong> Para verificar quantas threads do sistema WPS_LPR estão ativas, basta fazer uma requisição 
+<p><strong>6.</strong> Para verificar quantas threads do sistema WPS_LPR estão ativas, basta fazer uma requisição 
 GET HTTP no endpoint abaixo:</p>
 <pre><code class="language-bash">http://ip_do_servidor_lpr:5000/api/v0/threads
 </code></pre>
 <p>O retorno será a quantidade de threads em execução, usado para DEBUG.</p>
-<p><strong>7.1</strong> Para verificar o nome das threads em execução no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:</p>
+<p><strong>6.1</strong> Para verificar o nome das threads em execução no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:</p>
 <pre><code class="language-bash">http://ip_do_servidor_lpr:5000/api/v0/threads_details
 </code></pre>
 <p>O retorno será o detalhamento das threads, para ajudar no processo de DEBUG.</p>
@@ -1020,7 +861,7 @@ GET HTTP no endpoint abaixo:</p>
 </details>
 
 <h3 id="exibindo-a-versao-do-wps_lpr">Exibindo a versão do WPS_LPR</h3>
-<p><strong>8.</strong> Para verificar a versão do sistema, faça uma requisição GET HTTP no endpoint abaixo:</p>
+<p><strong>7.</strong> Para verificar a versão do sistema, faça uma requisição GET HTTP no endpoint abaixo:</p>
 <pre><code class="language-bash">http://ip_do_servidor_lpr:5000/api/v0/version
 </code></pre>
 <pre><code>{
@@ -1028,7 +869,7 @@ GET HTTP no endpoint abaixo:</p>
 }
 </code></pre>
 <h3 id="verificando-as-conexoes-no-wps_lpr">Verificando as conexões no WPS_LPR</h3>
-<p><strong>9.</strong> Para verificar todas as conexões configuradas no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:</p>
+<p><strong>8.</strong> Para verificar todas as conexões configuradas no sistema WPS_LPR, faça uma requisição GET HTTP no endpoint:</p>
 <pre><code class="language-bash">http://ip_do_servidor_lpr:5000/api/v0/connections
 </code></pre>
 <p>O retorno será a listagem das conexões configuradas no sistema.</p>
@@ -1103,11 +944,11 @@ GET HTTP no endpoint abaixo:</p>
 </details>
 
 <h3 id="reiniciando-a-aplicacao">Reiniciando a aplicação</h3>
-<p><strong>10.</strong> Para reiniciar o sistema WPS_LPR, utilize o endpoint abaixo:</p>
+<p><strong>9.</strong> Para reiniciar o sistema WPS_LPR, utilize o endpoint abaixo:</p>
 <pre><code>http://ip_do_servidor_lpr:5000/api/v0/reboot_wpslpr
 </code></pre>
 <h3 id="verificando-vagas-do-modo-segmentation">Verificando vagas do modo <em>Segmentation</em></h3>
-<p><strong>11.</strong> Para obter a lista das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
+<p><strong>10.</strong> Para obter a lista das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
 <pre><code>http://ip_do_servidor_lpr:5000/general/spaces
 </code></pre>
 <blockquote>
@@ -1129,7 +970,7 @@ GET HTTP no endpoint abaixo:</p>
     &quot;yCoord&quot;: 0
 }
 </code></pre>
-<p><strong>12.</strong> Para obter uma atualização das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
+<p><strong>11.</strong> Para obter uma atualização das vagas monitoradas pelas câmeras do tipo "<strong><em>segmentation</em></strong>":</p>
 <pre><code>http://ip_do_servidor_lpr:5000/parkingSpaces/status/x
 </code></pre>
 <blockquote>
@@ -1137,7 +978,7 @@ GET HTTP no endpoint abaixo:</p>
 </blockquote>
 <p><strong><em></em></strong></p>
 <h3 id="obtendo-a-placa-com-o-modo-rekognition">Obtendo a placa com o modo Rekognition</h3>
-<p><strong>13.</strong> Para submeter uma imagem única para reconhecer a placa, utilize o método "<em><strong>rekognition</strong></em>" </p>
+<p><strong>12.</strong> Para submeter uma imagem única para reconhecer a placa, utilize o método "<em><strong>rekognition</strong></em>" </p>
 <pre><code>http://ip_do_servidor_lpr:5000/api/v0/rekognition
 </code></pre>
 <p style="text-align: justify;">
@@ -1145,6 +986,11 @@ A imagem pode estar nas extensões, <strong>bmp</strong>, <strong>jpg</strong> o
 em <strong>base64</strong>. Para enviar, utilize o método POST, no corpo da mensagem coloque <em>image</em> 
 na <em>key</em>, e a imagem que quer submeter em <em>value</em>. O retorno da solicitação será o seguinte:
 </p>
+
+<h4>Exemplo de requisição com <code>curl</code></h4>
+<pre><code class="language-bash">curl -X POST http://ip_do_servidor_lpr:5000/api/v0/rekognition \
+  -F "image=@image.jpg"
+</code></pre>
 
 <pre><code>{
     &quot;timestamp&quot;: &quot;2024-11-07 14:47:28.931&quot;,
