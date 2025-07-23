@@ -1,0 +1,24 @@
+.md-grid {
+  max-width: 90% !important;
+  width: 90% !important;
+}
+
+.md-content,
+.md-main__inner,
+.md-typeset {
+  max-width: 90% !important;
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
+pre, code {
+  max-width: 100% !important;
+  width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tabcontent-system,
+.tabcontent-platform {
+  width: 100% !important;
+}
